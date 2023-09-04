@@ -1,7 +1,7 @@
 # Личный проект «Глейси»
 
 * Студент: [Динара Гимранова](https://up.htmlacademy.ru/htmlcss/37/user/2385039).
-* Наставник: `Неизвестно`.
+* Наставник: [Сергей Остаповец](https://htmlacademy.ru/profile/seraphim).
 
 ---
 
