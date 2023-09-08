@@ -32,16 +32,16 @@ html {
   box-sizing: border-box;
 }
 
-
 body {
   margin: 0 auto;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
-  min-height: 100%;
-  width: 100%;
+  flex-direction: column;
+  /*min-height: 100%;*/
   background-color: #FFCBD8;
 
-  outline: 1px solid red;
+  outline: 1px solid blue;
   outline-offset: -1px;
 }
 
@@ -59,4 +59,1210 @@ body {
 .button {
   border: none;
   cursor: pointer;
+}
+
+
+/* Шапка главной страницы сайта */
+
+.header-wrapper {
+  margin: 0 auto;
+  width: 1170px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  display: flex;
+
+
+  outline: 1px solid red;
+  outline-offset: -1px;
+}
+
+.header-logo-wrapper {
+  width: 137px;
+  height: 56px;
+  margin: 0;
+  padding: 0;
+  margin-right: 16px;
+
+
+  outline: 1px solid red;
+  outline-offset: -1px;
+}
+
+.header-navigation-wrapper {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  width: 1033px;
+  justify-content: start;
+}
+
+.header-navigation-left {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  width: 422px;
+  align-items: center;
+
+  outline: 1px solid red;
+  outline-offset: -1px;
+
+}
+
+.header-catalog-wrapper {
+  width: 117px;
+  margin: 0;
+  padding: 8px 16px;
+  color: #2D3440;
+  font-family: "Inter";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  cursor: pointer;
+
+  outline: 1px solid red;
+  outline-offset: -1px;
+}
+
+.header-catalog {
+  cursor: pointer;
+}
+
+.header-navigation-left-link {
+  padding: 8px 16px;
+  margin: 0;
+  text-decoration: none;
+  color: #2D3440;
+  font-family: "Inter";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+
+  outline: 1px solid red;
+  outline-offset: -1px;
+}
+
+
+/* Навигация правой части главной страницы */
+.header-navigation-right {
+  margin: 0;
+  padding: 0;
+  margin-left: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  width: 431px;
+  align-items: center;
+
+  outline: 1px solid red;
+  outline-offset: -1px;
+}
+
+.header-phone-link {
+  color: #2D3440;
+  font-family: "Inter";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  margin-right: 16px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  width: 148px;
+  display: flex;
+  flex-wrap: wrap;
+
+  outline: 1px solid red;
+  outline-offset: -1px;
+}
+
+.header-navigation-right-link {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: #2D3440;
+  font-family: "Inter";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: start;
+
+  outline: 1px solid red;
+  outline-offset: -1px;
+}
+
+.header-navigation-seach {
+  margin: 0;
+  margin-right: 16px;
+  padding: 6px;
+  width: 32px;
+  height: 32px;
+  background-image: url(../images/header/search-icon.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  top: 0;
+  display: block;
+
+  outline: 1px solid red;
+  outline-offset: -1px;
+}
+
+.header-navigation-right-entrance {
+  margin: 0;
+  padding: 6px 16px 6px 38px;
+  width: 88px;
+
+  outline: 1px solid red;
+  outline-offset: -1px;
+}
+
+.cart-wrapper {
+  margin: 0;
+  margin-left: 16px;
+  padding: 6px 0 6px 38px;
+  width: 115px;
+  display: flex;
+  cursor: pointer;
+
+  outline: 1px solid red;
+  outline-offset: -1px;
+}
+
+/* Открывающийся подкаталог продукции */
+.subcatalog {
+  display: none;
+  margin: 0;
+  padding: 0;
+  margin-left: -16px;
+  width: 135px;
+  list-style-type: none;
+  border-radius: 4px;
+  background: #FCFCFC;
+  box-shadow: 0 8px 16px 0 rgba(45, 52, 64, 0.12);
+
+  outline: 1px solid red;
+  outline-offset: -1px;
+}
+
+.subcatalog-list {
+  margin: 0;
+  padding: 0;
+  padding-left: 16px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  font-family: "Inter";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.subcatalog-link {
+  margin: 0;
+  padding: 0;
+  color: #2D3440;
+  text-decoration: none;
+
+}
+
+.subcatalog-link-new {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 4px;
+  font-family: "Inter";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  position: relative;
+}
+
+/*.subcatalog-link-new::before {
+  position: absolute;
+  content: "";
+  width: 103px;
+  height: 1px;
+  color: #B9B9B9;
+  bottom: 0;
+  left: 0;
+  z-index: 15;
+}*/
+
+
+/* Главная страница */
+
+.main-container {
+  margin: 0 auto;
+  padding: 0;
+  width: 1366px;
+  flex-grow: 1;
+
+  outline: 1px solid black;
+  outline-offset: -1px;
+}
+
+
+/* Слайдер-секция */
+
+.section-slider {
+  margin: 0 auto;
+  padding: 0;
+  margin-top: 24px;
+  margin-bottom: 80px;
+  width: 1170px;
+  display: grid;
+  grid-template-columns: 525px 367px 278px;
+  column-gap: 0;
+
+
+  outline: 1px solid red;
+  outline-offset: -1px;
+}
+
+.section-slider-wrapper {
+  margin: 0;
+  padding: 0;
+  width: 525px;
+  padding-left: 70px;
+
+
+  outline: 1px solid red;
+  outline-offset: -1px;
+}
+
+.section-slider-title {
+  margin: 0;
+  padding: 0;
+  margin-top: 136px;
+  width: 470px;
+  color: #2D3440;
+  font-family: "Inter";
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 46px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: start;
+
+  outline: 1px solid red;
+  outline-offset: -1px;
+}
+
+.section-slider-info {
+  margin: 0;
+  padding: 0;
+  margin-top: 24px;
+  width: 429px;
+  color: #2D3440;
+  font-family: "Inter";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+
+
+  outline: 1px solid red;
+  outline-offset: -1px;
+
+}
+
+.slider-controls {
+  margin: 0;
+  padding: 0;
+  width: 52px;
+  display: flex;
+  align-items: end;
+  justify-content: start;
+
+}
+
+.section-slider-order {
+  margin: 0;
+  padding: 12px 32px;
+  margin-top: 48px;
+  width: 139px;
+  color: #2D3440;
+  text-align: center;
+  font-family: "Inter";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  border-radius: 26px;
+  border: 4px solid rgba(252, 252, 252, 0.4);
+  background-color: #FCFCFC;
+  box-shadow: 0 4px 12px 0 rgba(45, 52, 64, 0.1);
+}
+
+.section-slider-image {
+  margin: 0;
+  padding: 0;
+  margin-top: 21px;
+  margin-bottom: 18px;
+  width: 327px;
+  height: 507px;
+  object-fit: cover;
+
+  outline: 1px solid red;
+  outline-offset: -1px;
+}
+
+
+/* Социальные сети */
+.slider-social-links {
+  margin: 0;
+  padding: 0;
+  width: 278px;
+  display: flex;
+  align-items: end;
+}
+
+.slider-social-list {
+  margin: 0;
+  padding: 0;
+  margin-left: auto;
+  list-style-type: none;
+  width: 104px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+
+  outline: 1px solid red;
+  outline-offset: -1px;
+}
+
+.slider-social-item {
+  width: 28px;
+  height: 28px;
+  margin: 0;
+  padding: 2px;
+
+  outline: 1px solid red;
+  outline-offset: -1px;
+}
+
+
+.slider-social-tme,
+.slider-social-vk,
+.slider-social-youtube {
+  margin: 0;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+}
+
+/* Раздел промо акций */
+.section-promotion {
+  margin: 0 auto;
+  padding: 0;
+  width: 1170px;
+
+  outline: 1px solid red;
+  outline-offset: -1px;
+
+}
+
+
+.section-promotion-title {
+  margin: 0 auto;
+  padding: 0;
+  margin-bottom: 55px;
+  width: 434px;
+  color: #2D3440;
+  text-align: center;
+  font-family: "Inter";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 46px;
+
+  outline: 1px solid red;
+  outline-offset: -1px;
+}
+
+.section-promotion-list-wrapper {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 570px);
+  column-gap: 30px;
+
+
+  outline: 1px solid red;
+  outline-offset: -1px;
+}
+
+.section-promotion-list {
+  margin: 0;
+  padding: 0;
+  padding-top: 36px;
+  padding-bottom: 36px;
+  padding-left: 36px;
+  border-radius: 16px;
+  background: #F79;
+  position: relative;
+
+  outline: 1px solid red;
+  outline-offset: -1px;
+
+}
+
+.section-promotion-slogan {
+  margin: 0;
+  padding: 0;
+  color: #2D3440;
+  font-family: "Inter";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 30px;
+
+  outline: 1px solid red;
+  outline-offset: -1px;
+}
+
+.section-promotion-action {
+  margin: 0;
+  padding: 0;
+  margin-top: 28px;
+  width: 317px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  color: #2D3440;
+  font-family: "Inter";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+
+  outline: 1px solid red;
+  outline-offset: -1px;
+}
+
+.section-promotion-img-1 {
+  background-image: url(../images/section-promotion/raspberry-photo.png);
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.section-promotion-img-2 {
+  background-image: url(../images/section-promotion/marshmallow-photo.png);
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.button-promotion {
+  margin: 0;
+  margin-top: 28px;
+  padding: 12px 32px;
+  width: 184px;
+  color: #2D3440;
+  text-align: center;
+  font-family: "Inter";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  border-radius: 26px;
+  border: 4px solid rgba(252, 252, 252, 0.40);
+  background-color: #FCFCFC;
+  box-shadow: 0 4px 12px 0 rgba(45, 52, 64, 0.10);
+
+  outline: 1px solid red;
+  outline-offset: -1px;
+}
+
+/* Раздел популярной продукции */
+.section-popular {
+  margin: 0 auto;
+  padding: 0;
+  width: 1170px;
+
+  outline: 1px solid red;
+  outline-offset: -1px;
+}
+
+.section-popular-title {
+  margin: 0 auto;
+  padding: 0;
+  margin-top: 80px;
+  width: 527px;
+  color: #2D3440;
+  text-align: center;
+  font-family: "Inter";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 46px;
+  display: flex;
+  flex-wrap: wrap;
+
+  outline: 1px solid red;
+  outline-offset: -1px;
+}
+
+.section-popular-list {
+  margin: 0 auto;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 270px);
+  column-gap: 30px;
+  width: 1170px;
+  justify-content: center;
+  list-style-type: none;
+
+
+  outline: 1px solid red;
+  outline-offset: -1px;
+}
+
+
+.section-popular-card {
+  margin: 0;
+  padding: 0;
+  margin-top: 56px;
+  width: 270px;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 8px;
+  background: url(../images/section-popular/substrate.svg) no-repeat;
+  background-position: bottom;
+  background-size: auto;
+
+  outline: 1px solid red;
+  outline-offset: -1px;
+}
+
+
+.section-popular-image {
+  padding: 0;
+  margin: 0 51px 16px 51px;
+  width: 168px;
+  height: 168px;
+  object-fit: cover;
+
+
+  outline: 1px solid red;
+  outline-offset: -1px;
+}
+
+.section-popular-link {
+  margin: 0 40px;
+  padding: 0;
+  margin-bottom: 8px;
+  width: 190px;
+  color: #2D3440;
+  font-family: "Inter";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  text-decoration: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+
+
+  outline: 1px solid red;
+  outline-offset: -1px;
+}
+
+.section-popular-info {
+  margin: 0 40px;
+  padding: 0;
+  margin-bottom: 16px;
+  width: 190px;
+  color: #565C66;
+  font-family: "Inter";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+
+  outline: 1px solid red;
+  outline-offset: -1px;
+}
+
+.price-cart-wrapper {
+  margin: 0 40px 24px 40px;
+  padding: 0;
+  width: 190px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: start;
+
+  outline: 1px solid red;
+  outline-offset: -1px;
+}
+
+.section-popular-price {
+  margin: 0;
+  padding: 0;
+  color: #2D3440;
+  font-family: "Inter";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+
+  outline: 1px solid red;
+  outline-offset: -1px;
+}
+
+.section-popular-cart {
+  margin: 0;
+  padding: 0;
+  margin-left: auto;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+
+  outline: 1px solid red;
+  outline-offset: -1px;
+}
+
+/* Раздел о преимуществах компании */
+.section-advantages-wrapper {
+  margin: 0 auto;
+  margin-top: 80px;
+  padding: 24px;
+  width: 1170px;
+  border-radius: 16px;
+  background: url(../images/section-advantages/section-promotion-background.png), lightgray 50% / cover no-repeat;
+  background-size: cover;
+
+  outline: 1px solid red;
+  outline-offset: -1px;
+}
+
+.section-advantages {
+  margin: 0;
+  padding: 56px 40px;
+  background-color: #FFFFFF;
+  border-radius: 16px;
+
+  outline: 1px solid red;
+  outline-offset: -1px;
+}
+
+.section-advantages-title {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 56px;
+  width: 995px;
+  color: #2D3440;
+  text-align: center;
+  font-family: "Inter";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 46px;
+
+  outline: 1px solid red;
+  outline-offset: -1px;
+}
+
+.section-advantages-list-wrapper {
+  margin: 0;
+  padding: 0;
+  display: flex;
+
+
+  outline: 1px solid red;
+  outline-offset: -1px;
+}
+
+.section-advantages-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(2, 505px);
+  column-gap: 32px;
+  row-gap: 40px;
+
+  outline: 1px solid red;
+  outline-offset: -1px;
+}
+
+.section-advantages-item {
+  margin: 0;
+  padding: 0;
+  padding-left: 64px;
+  width: 505px;
+
+  outline: 1px solid red;
+  outline-offset: -1px;
+}
+
+.section-advantages-info {
+  margin: 0;
+  padding: 0;
+  width: 442px;
+  color: #565C66;
+  font-family: "Inter";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+
+  outline: 1px solid red;
+  outline-offset: -1px;
+}
+
+/* Раздел Email рассыло */
+.section-mailing {
+  margin: 0 auto;
+  padding: 0;
+  margin-top: 80px;
+  width: 1170px;
+  display: grid;
+  grid-template-columns: repeat(2, 570px);
+  column-gap: 30px;
+
+  outline: 1px solid red;
+  outline-offset: -1px;
+}
+
+.section-mailing-wrapper {
+  margin: 0;
+  padding: 33px 235px 67px 32px;
+  width: 570px;
+  display: flex;
+  flex-wrap: wrap;
+  background: url(../images/section-mailing/mailing-news-image.jpg) no-repeat center;
+  border-radius: 16px;
+  background-size: cover;
+
+  outline: 1px solid red;
+  outline-offset: -1px;
+}
+
+.section-mailing-news {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: #565C66;
+  font-family: "Inter";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+
+  outline: 1px solid red;
+  outline-offset: -1px;
+}
+
+.section-mailing-list {
+  margin: 0;
+  padding: 0;
+  margin-top: 12px;
+  text-decoration: none;
+  color: #2D3440;
+  font-family: "Inter";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 30px;
+
+  outline: 1px solid red;
+  outline-offset: -1px;
+}
+
+.mailing-form-wrapper {
+  margin: 0;
+  padding: 0;
+  background: url(../images/section-mailing/mailing-form-image.jpg) no-repeat center;
+  border-radius: 16px;
+  background-size: cover;
+
+  outline: 1px solid red;
+  outline-offset: -1px;
+}
+
+.mailing-form {
+  margin: 6px;
+  padding: 26px;
+  width: 558px;
+  border-radius: 16px;
+  background: #FFF;
+
+  outline: 1px solid red;
+  outline-offset: -1px;
+}
+
+.mailing-form-info {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 42px;
+  width: 506px;
+  color: #565C66;
+  font-family: "Inter";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+
+
+  outline: 1px solid red;
+  outline-offset: -1px;
+}
+
+.email-form {
+  margin: 0;
+  padding: 0;
+
+}
+
+.email-input {
+  margin: 0;
+  padding: 0;
+  padding-left: 16px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  width: 332px;
+  border-radius: 4px;
+  border: 1px solid #B9B9B9;
+  background-color: #FFF;
+  box-sizing: border-box;
+
+  color: #2D3440;
+  font-family: "Inter";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+
+  outline: 1px solid red;
+  outline-offset: -1px;
+}
+
+.email-input:active {
+  color: #2D3440;
+  font-family: "Inter";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.email-input::placeholder {
+  color: #B9B9B9;
+  font-family: "Inter";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+
+
+}
+
+.button-subscribe {
+  margin: 0;
+  padding: 12px 32px;
+  width: 160px;
+  color: #FCFCFC;
+  text-align: center;
+  font-family: "Inter";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  border-radius: 26px;
+  border: 4px solid rgba(255, 47, 100, 0.30);
+  background-color: #FF2F64;
+  box-shadow: 0 4px 12px 0 rgba(45, 52, 64, 0.10);
+}
+
+/* Раздел о доставке продукции */
+.section-delivery {
+  margin: 0 auto;
+  padding: 0;
+  margin-top: 80px;
+  width: 1170px;
+  background: url(../images/section-delivery/section-delivery-background.jpg) no-repeat center;
+  border-radius: 16px;
+  background-size: cover;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+
+
+  outline: 1px solid red;
+  outline-offset: -1px;
+}
+
+.delivery-info-wrapper {
+  margin: 0;
+  padding: 0;
+  margin-top: 167px;
+  margin-bottom: 167px;
+  margin-left: 100px;
+  width: 371px;
+}
+
+.section-delivery-title {
+  margin: 0;
+  padding: 0;
+  width: 356px;
+  color: #2D3440;
+  font-family: "Inter";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 46px;
+
+  outline: 1px solid red;
+  outline-offset: -1px;
+}
+
+.section-delivery-info {
+  margin: 0;
+  padding: 0;
+  margin-top: 24px;
+  width: 371px;
+  color: #565C66;
+  font-family: "Inter";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+
+  outline: 1px solid red;
+  outline-offset: -1px;
+}
+
+.section-delivery-wrapper {
+  padding: 0;
+  margin: 64px 64px 64px 0;
+  width: 500px;
+  background-color: #FCFCFC;
+  border-radius: 8px;
+  box-shadow: 0 15px 40px 0 rgba(45, 52, 64, 0.12);
+
+  outline: 1px solid red;
+  outline-offset: -1px;
+
+}
+
+.section-delivery-details {
+  margin: 40px 80px 0 40px;
+  padding: 0;
+  width: 380px;
+  color: #565C66;
+  font-family: "Inter";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  display: flex;
+
+  outline: 1px solid red;
+  outline-offset: -1px;
+}
+
+.section-delivery-form {
+  margin: 0;
+  margin-top: 32px;
+  padding: 0 40px 42px 40px;
+
+
+  outline: 1px solid red;
+  outline-offset: -1px;
+}
+
+
+/* Форма обратной связи */
+.section-feedback-wrapper {
+  margin: 0 auto;
+  margin-top: 80px;
+  padding: 64px;
+  width: 1170px;
+  background: url(../images/section-feedback/section-feedback-background.png) no-repeat center;
+  border-radius: 16px;
+  background-size: cover;
+
+  outline: 1px solid red;
+  outline-offset: -1px;
+}
+
+.section-feedback {
+  margin: 0;
+  padding: 40px;
+  width: 343px;
+  border-radius: 8px;
+  background-color: #FCFCFC;
+  box-shadow: 0 8px 16px 0 rgba(45, 52, 64, 0.12);
+
+  outline: 1px solid red;
+  outline-offset: -1px;
+}
+
+.section-feedback-title {
+  margin: 0;
+  padding: 0;
+  width: 179px;
+  color: #565C66;
+  font-family: "Inter";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+
+  outline: 1px solid red;
+  outline-offset: -1px;
+}
+
+.section-feedback-address {
+  margin: 0;
+  padding: 0;
+  width: 263px;
+  display: flex;
+  flex-wrap: wrap;
+
+  outline: 1px solid red;
+  outline-offset: -1px;
+}
+
+.section-feedback-address-item {
+  margin: 0;
+  padding: 0;
+  margin-top: 12px;
+  color: #2D3440;
+  font-family: "Inter";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+
+  outline: 1px solid red;
+  outline-offset: -1px;
+}
+
+.section-feedback-order {
+  margin: 0;
+  padding: 0;
+  margin-top: 24px;
+  width: 203px;
+  color: #565C66;
+  font-family: "Inter";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+
+  outline: 1px solid red;
+  outline-offset: -1px;
+}
+
+.section-feedback-tel {
+  margin: 0;
+  padding: 0;
+  margin-top: 12px;
+  text-decoration: none;
+  width: 225px;
+  color: #2D3440;
+  font-family: "Inter";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  display: flex;
+  flex-wrap: wrap;
+
+  outline: 1px solid red;
+  outline-offset: -1px;
+}
+
+.section-feedback-working {
+  margin: 0;
+  padding: 0;
+  width: 160px;
+  color: #565C66;
+  font-family: "Inter";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+
+  outline: 1px solid red;
+  outline-offset: -1px;
+}
+
+.feedback-form-link {
+  margin: 0;
+  padding: 9px 32px;
+  margin-top: 32px;
+  width: 258px;
+  text-decoration: none;
+  color: #FCFCFC;
+  text-align: center;
+  font-family: "Inter";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  border-radius: 26px;
+  border: 4px solid rgba(255, 47, 100, 0.30);
+  background-color: #FF2F64;
+  box-shadow: 0 4px 12px 0 rgba(45, 52, 64, 0.10);
+
+  outline: 1px solid red;
+  outline-offset: -1px;
+}
+
+/* Подвал сайта */
+.page-footer {
+  margin: 0 auto;
+  margin-top: 48px;
+  margin-bottom: 48px;
+  padding: 0;
+  width: 1170px;
+
+  outline: 1px solid red;
+  outline-offset: -1px;
+}
+
+
+.page-footer-wrapper {
+  margin: 0;
+  padding: 0;
+  width: 1170px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+}
+
+/* Социальные сети */
+.footer-social-links {
+  margin: 0;
+  padding: 0;
+  margin-right: 259px;
+  width: 104px;
+  display: flex;
+}
+
+.footer-social-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
 }
