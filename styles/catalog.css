@@ -1,0 +1,164 @@
+.main-inner {
+  margin: 0 auto;
+  padding: 0;
+  width: 1366px;
+
+  outline: 1px solid black;
+  outline-offset: -1px;
+}
+
+.inner-header {
+  margin: 0;
+  padding: 0;
+  padding-left: 98px;
+  margin-top: 32px;
+
+  outline: 1px solid red;
+  outline-offset: -1px;
+
+}
+
+.breadcrumbs {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  width: 335px;
+
+  outline: 1px solid red;
+  outline-offset: -1px;
+}
+
+.breadcrumbs-item:not(:last-child) {
+  margin-right: 28px;
+}
+
+.breadcrumbs-link {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: #2D3440;
+  font-family: "Inter";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+.inner-header-title {
+  margin: 0;
+  padding: 0;
+  margin-top: 16px;
+  color: #2D3440;
+  font-family: "Inter";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 46px;
+  width: 379px;
+  display: flex;
+  flex-wrap: wrap;
+
+  outline: 1px solid red;
+  outline-offset: -1px;
+}
+
+.section-sorting-filter-wrapper {
+  margin: 0;
+  padding: 0;
+  padding-left: 98px;
+  margin-top: 40px;
+}
+
+.section-sorting-filter {
+  margin: 0;
+  padding: 0;
+  width: 823px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.section-sorting-wrapper {
+  margin: 0;
+  padding: 0;
+  width: 196px;
+  margin-right: 24px;
+
+  outline: 1px solid red;
+  outline-offset: -1px;
+}
+
+
+.section-sorting-title {
+  margin: 0;
+  padding: 0;
+  padding-left: 16px;
+  margin-bottom: 8px;
+  color: #2D3440;
+  font-family: "Inter";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  width: 196px;
+}
+
+.select-control {
+  margin: 0;
+  padding: 8px 63px 8px 16px;
+  color: #2D3440;
+  font-family: "Inter";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  width: 196px;
+  appearance: none;
+  border: none;
+  border-radius: 20px;
+  background-color: rgba(252, 252, 252, 0.3);
+}
+
+.catalog-filter-title {
+  margin: 0;
+  padding: 0;
+  padding-left: 16px;
+  margin-bottom: 8px;
+  color: #2D3440;
+  font-family: "Inter";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.catalog-filter-price {
+  margin: 0;
+  padding: 0;
+  width: 196px;
+  margin-right: 24px;
+  appearance: none;
+  border: none;
+  border-radius: 20px;
+  background-color: rgba(252, 252, 252, 0.3);
+
+  outline: 1px solid red;
+  outline-offset: -1px;
+
+}
+
+/* Каталог товаров */
+.section-catalog-list {
+  margin: 0 auto;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 270px);
+  column-gap: 30px;
+  row-gap: 40px;
+  width: 1170px;
+  justify-content: center;
+  list-style-type: none;
+  outline: 1px solid red;
+  outline-offset: -1px;
+}
