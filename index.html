@@ -60,15 +60,15 @@
             <a class="header-phone-link" href="tel:+78005558628">+7 800 555-86-28
             </a>
 
-            <a class="header-navigation-right-link header-navigation-seach" href="#">
+            <a class="header-navigation-seach" href="#">
               <span class="visually-hidden"> Поиск продукции. </span>
             </a>
 
-            <a class="header-navigation-right-link header-navigation-right-entrance" href="#">
+            <a class="header-navigation-right-entrance" href="#">
               Вход
             </a>
             <div class="cart-wrapper">
-              <a class="header-navigation-right-link header-navigation-right-cart" href="#">
+              <a class="header-navigation-right-cart" href="#">
                 2 товара
               </a>
             </div>
@@ -203,7 +203,7 @@
               </p>
               <div class="price-cart-wrapper">
                 <span class="section-popular-price"> 310 ₽/кг </span>
-                <a class="section-popular-cart">
+                <a class="section-popular-cart" href="#">
                   <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
                     fill="none" viewBox="0 0 32 32">
                     <rect width="32" height="32" fill="#FF2F64" rx="16" />
@@ -225,7 +225,7 @@
               </p>
               <div class="price-cart-wrapper">
                 <span class="section-popular-price"> 340 ₽/кг </span>
-                <a class="section-popular-cart">
+                <a class="section-popular-cart" href="#">
                   <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
                     fill="none" viewBox="0 0 32 32">
                     <rect width="32" height="32" fill="#FF2F64" rx="16" />
@@ -245,7 +245,7 @@
               <p class="section-popular-info">Крем-брюле с черничным джемом</p>
               <div class="price-cart-wrapper">
                 <span class="section-popular-price"> 330 ₽/кг </span>
-                <a class="section-popular-cart">
+                <a class="section-popular-cart" href="#">
                   <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
                     fill="none" viewBox="0 0 32 32">
                     <rect width="32" height="32" fill="#FF2F64" rx="16" />
@@ -268,7 +268,7 @@
               </p>
               <div class="price-cart-wrapper">
                 <span class="section-popular-price"> 320 ₽/кг </span>
-                <a class="section-popular-cart">
+                <a class="section-popular-cart" href="#">
                   <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
                     fill="none" viewBox="0 0 32 32">
                     <rect width="32" height="32" fill="#FF2F64" rx="16" />
@@ -293,32 +293,32 @@
           </h2>
           <div class="section-advantages-list-wrapper">
             <ol class="section-advantages-list">
-              <li class="section-advantages-item">
-                <span class="visually-hidden section-advantages-icon-ice-cream">Картинка-иконка мороженого.</span>
+              <li class="section-advantages-item section-advantages-technologies">
+                <span class="visually-hidden">Картинка-иконка мороженого.</span>
                 <p class="section-advantages-info">
                   Всё наше мороженое изготавливается на собственном производстве
                   с использованием современного оборудования и проверенных
                   временем технологий.
                 </p>
               </li>
-              <li class="section-advantages-item">
-                <span class="visually-hidden section-advantages-icon-cow">Картинка-иконка коровы.</span>
+              <li class="section-advantages-item section-advantages-reliability">
+                <span class="visually-hidden">Картинка-иконка коровы.</span>
                 <p class="section-advantages-info">
                   Закупка ингредиентов производится только у&nbsp;проверенных
                   фермерских хозяйств, с которыми нас&nbsp;связывает
                   долговременное сотрудничество.
                 </p>
               </li>
-              <li class="section-advantages-item">
-                <span class="visually-hidden section-advantages-icon-leaf">Картинка-иконка листочка.</span>
+              <li class="section-advantages-item section-advantages-natural">
+                <span class="visually-hidden">Картинка-иконка листочка.</span>
                 <p class="section-advantages-info">
                   Для приготовления мороженого используются сливки и молоко
                   высочайшего качества. Все ингредиенты и&nbsp;добавки
                   произведены из натурального сырья.
                 </p>
               </li>
-              <li class="section-advantages-item">
-                <span class="visually-hidden section-advantages-icon-thermometer">Картинка-иконка термометра.</span>
+              <li class="section-advantages-item section-advantages-quality">
+                <span class="visually-hidden">Картинка-иконка термометра.</span>
                 <p class="section-advantages-info">
                   Доставка нашего мороженого осуществляется в специальном
                   термопаке, который не даёт мороженому растаять и позволяет
@@ -350,7 +350,7 @@
             <label class="email-form">
               <input class="email-input" type="email" placeholder="email@example.com">
             </label>
-            <button class="button button-subscribe" type="button">
+            <button class="button button-subscribe" type="submit">
               Отправить
             </button>
           </form>
@@ -371,12 +371,11 @@
           </p>
         </div>
         <div class="section-delivery-wrapper">
+          <p class="section-delivery-details">
+            Укажите адрес и дату доставки, и мы свяжемся с вами, чтобы
+            подтвердить заказ.
+          </p>
           <form class="section-delivery-form" action="https://echo.htmlacademy.ru/" method="post">
-            <p class="section-delivery-details">
-              Укажите адрес и дату доставки, и мы свяжемся с вами, чтобы
-              подтвердить заказ.
-            </p>
-
             <label class="delivery-form-date">
               Дата
               <input class="delivery-form-date-input" type="text" placeholder="01.04.2020">
@@ -391,7 +390,7 @@
               Адрес
               <input class="delivery-form-address-input" type="text" placeholder="ул. Большая Конюшенная, 19/8">
             </label>
-            <button class="button button-subscribe" type="button">
+            <button class="button button-delivery-subscribe" type="submit">
               Отправить
             </button>
           </form>
@@ -468,19 +467,21 @@
           </ul>
         </section>
         <div class="section-regulations">
-          <ul class="section-regulations-list">
+          <ul class="section-regulations-list-left">
             <li class="section-regulations-item">
-              <a class="section-regulations-link" href="#"> Для поставщиков </a>
+              <a class="section-regulations-link section-regulations-link-mark" href="#"> Для поставщиков </a>
             </li>
             <li class="section-regulations-item">
               <a class="section-regulations-link" href="#"> О производстве </a>
             </li>
+          </ul>
+          <ul class="section-regulations-list-right">
             <li class="section-regulations-item">
               <a class="section-regulations-link" href="#"> Наши документы </a>
             </li>
             <li class="section-regulations-item">
               <a class="section-regulations-link" href="#">
-                Экологические стандарты
+                Экологические&nbsp;стандарты
               </a>
             </li>
           </ul>
@@ -504,6 +505,7 @@
         </div>
       </div>
     </footer>
+
   </body>
 
 </html>
