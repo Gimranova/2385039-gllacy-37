@@ -107,11 +107,13 @@
             <div class="form-filter-wrapper">
               <div class="section-sorting-wrapper">
                 <h3 class="section-sorting-title">Сортировка:</h3>
-                <select class="select-control" aria-label="select">
-                  <option value="popular">по популярности</option>
-                  <option value="price">по цене</option>
-                  <option value="new">по новинкам</option>
-                </select>
+                <div class="select-control-wrapper">
+                  <select class="select-control">
+                    <option value="popular">по популярности</option>
+                    <option value="price">по цене</option>
+                    <option value="new">по новинкам</option>
+                  </select>
+                </div>
               </div>
 
               <fieldset class="catalog-filter-price">
@@ -131,30 +133,30 @@
               </fieldset>
 
 
-              <fieldset class="catalog-filter-fat">
+              <fieldset class="catalog-filter-group">
                 <legend class="catalog-filter-title">Жирность:</legend>
-                <ul class="catalog-filter-list-fat">
-                  <li class="catalog-filter-item-fat">
+                <ul class="catalog-filter-list-radio">
+                  <li class="catalog-filter-radio">
                     <label class="control">
-                      <input class="visually-hidden control-input" type="radio" value="0">
+                      <input class="control-radio" type="radio" value="0" name="catalog-group-fat">
                       0%
                     </label>
                   </li>
-                  <li class="catalog-filter-item-fat">
+                  <li class="catalog-filter-radio">
                     <label class="control">
-                      <input class="visually-hidden control-input" type="radio" value="10" checked>
+                      <input class="control-radio" type="radio" value="10" name="catalog-group-fat" checked>
                       до 10%
                     </label>
                   </li>
-                  <li class="catalog-filter-item-fat">
+                  <li class="catalog-filter-radio">
                     <label class="control">
-                      <input class="visually-hidden control-input" type="radio" value="30">
+                      <input class="control-radio" type="radio" value="30" name="catalog-group-fat">
                       до 30%
                     </label>
                   </li>
-                  <li class="catalog-filter-item-fat">
+                  <li class="catalog-filter-radio">
                     <label class="control">
-                      <input class="visually-hidden control-input" type="radio" value="more">
+                      <input class="control-radio" type="radio" value="more" name="catalog-group-fat">
                       выше 30%
                     </label>
                   </li>
@@ -165,33 +167,33 @@
               <fieldset class="catalog-filter-group">
                 <legend class="catalog-filter-title">Наполнители:</legend>
                 <ul class="catalog-filter-list">
-                  <li class="catalog-filter-item">
+                  <li class="catalog-filter-checkbox">
                     <label class="control">
-                      <input class="control-input" value="chocolate" type="checkbox" name="шоколадный" checked>
+                      <input class="control-checkbox" value="chocolate" type="checkbox" name="шоколадный" checked>
                       шоколадные
                     </label>
                   </li>
-                  <li class="catalog-filter-item">
+                  <li class="catalog-filter-checkbox">
                     <label class="control">
-                      <input class="control-input" value="sprinkles" type="checkbox" name="присыпки" checked>
+                      <input class="control-checkbox" value="sprinkles" type="checkbox" name="присыпки" checked>
                       сахарные посыпки
                     </label>
                   </li>
-                  <li class="catalog-filter-item">
+                  <li class="catalog-filter-checkbox">
                     <label class="control">
-                      <input class="control-input" value="fruits" type="checkbox" name="фрукты">
+                      <input class="control-checkbox" value="fruits" type="checkbox" name="фрукты">
                       фрукты
                     </label>
                   </li>
-                  <li class="catalog-filter-item">
+                  <li class="catalog-filter-checkbox">
                     <label class="control">
-                      <input class="control-input" value="syrups" type="checkbox" name="сиропы">
+                      <input class="control-checkbox" value="syrups" type="checkbox" name="сиропы">
                       сиропы
                     </label>
                   </li>
-                  <li class="catalog-filter-item">
+                  <li class="catalog-filter-checkbox">
                     <label class="control">
-                      <input class="control-input" value="jams" type="checkbox" name="джемы">
+                      <input class="control-checkbox" value="jams" type="checkbox" name="джемы">
                       джемы
                     </label>
                   </li>
@@ -211,7 +213,7 @@
                 src="./images/section-popular/popular-image-1.jpg" alt="Фото мороженого Малинка.">
               <a class="section-popular-link" href="#"> Малинка </a>
               <p class="section-popular-info">
-                Сливочное мороженое с малиновым джемом
+                Сливочное мороженое с&nbsp;малиновым джемом
               </p>
               <div class="price-cart-wrapper">
                 <span class="section-popular-price"> 310 ₽/кг </span>
@@ -232,7 +234,7 @@
                 src="./images/section-popular/popular-image-2.jpg" alt="Фото мороженого Фисташка.">
               <a class="section-popular-link" href="#"> Фисташка </a>
               <p class="section-popular-info">
-                Фисташковый пломбир с кусочками шоколада
+                Фисташковый пломбир с&nbsp;кусочками шоколада
               </p>
               <div class="price-cart-wrapper">
                 <span class="section-popular-price"> 340 ₽/кг </span>
@@ -252,7 +254,7 @@
               <img class="section-popular-image" width="168" height="168"
                 src="./images/section-popular/popular-image-3.jpg" alt="Фото мороженого Черника.">
               <a class="section-popular-link" href="#"> Черника </a>
-              <p class="section-popular-info">Крем-брюле с черничным джемом</p>
+              <p class="section-popular-info">Крем-брюле с&nbsp;черничным джемом</p>
               <div class="price-cart-wrapper">
                 <span class="section-popular-price"> 330 ₽/кг </span>
                 <a class="section-popular-cart" href="#">
@@ -294,7 +296,7 @@
                 src="./images/section-popular/popular-image-5.jpg" alt="Фото мороженого Ежевика.">
               <a class="section-popular-link" href="#"> Ежевика </a>
               <p class="section-popular-info">
-                Сливочное мороженое с ежевичным джемом
+                Сливочное мороженое с&nbsp;ежевичным джемом
               </p>
               <div class="price-cart-wrapper">
                 <span class="section-popular-price"> 330 ₽/кг </span>
@@ -315,7 +317,7 @@
                 src="./images/section-popular/popular-image-6.jpg" alt="Фото мороженого Банан.">
               <a class="section-popular-link" href="#"> Банан </a>
               <p class="section-popular-info">
-                Сливочный пломбир с банановым вкусом
+                Сливочный пломбир с&nbsp;банановым вкусом
               </p>
               <div class="price-cart-wrapper">
                 <span class="section-popular-price"> 340 ₽/кг </span>
@@ -355,7 +357,7 @@
                 src="./images/section-popular/popular-image-8.jpg" alt="Фото мороженого Клубничка.">
               <a class="section-popular-link" href="#"> Клубничка </a>
               <p class="section-popular-info">
-                Сливочный пломбир с клубничным вкусом
+                Сливочный пломбир с&nbsp;клубничным вкусом
               </p>
               <div class="price-cart-wrapper">
                 <span class="section-popular-price"> 300 ₽/кг </span>
@@ -398,7 +400,7 @@
                 src="./images/section-popular/popular-image-10.jpg" alt="Фото мороженого Ментол.">
               <a class="section-popular-link" href="#"> Ментол </a>
               <p class="section-popular-info">
-                Сливочный пломбир с ментоловым сиропом
+                Сливочный пломбир с&nbsp;ментоловым сиропом
               </p>
               <div class="price-cart-wrapper">
                 <span class="section-popular-price"> 320 ₽/кг </span>
@@ -419,7 +421,7 @@
                 src="./images/section-popular/popular-image-11.jpg" alt="Фото мороженого Орешек.">
               <a class="section-popular-link" href="#"> Орешек </a>
               <p class="section-popular-info">
-                Фисташковый пломбир с шоколадным сиропом
+                Фисташковый пломбир с&nbsp;шоколадным сиропом
               </p>
               <div class="price-cart-wrapper">
                 <span class="section-popular-price"> 360 ₽/кг </span>
@@ -440,7 +442,7 @@
                 src="./images/section-popular/popular-image-12.jpg" alt="Фото мороженого Крем-брюле.">
               <a class="section-popular-link" href="#"> Крем-брюле </a>
               <p class="section-popular-info">
-                Классическое крем-брюле
+                Классическое <br>крем-брюле
               </p>
               <div class="price-cart-wrapper">
                 <span class="section-popular-price"> 280 ₽/кг </span>
@@ -469,6 +471,16 @@
               <div class="pagination-number">
                 <ul class="pagination">
                   <li class="pagination-item">
+                    <a class="pagination-previoust">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
+                        <path fill="#2D3440" fill-rule="evenodd"
+                          d="M9.803 3.805a.665.665 0 1 0-.94-.94L4.195 7.533a.665.665 0 0 0-.003.938l.004.003 4.668 4.668a.665.665 0 1 0 .94-.94L5.605 8.003l4.198-4.198Z"
+                          clip-rule="evenodd" opacity=".3" />
+                      </svg>
+                    </a>
+                    <span class="visually-hidden">Предыдущая страница.</span>
+                  </li>
+                  <li class="pagination-item">
                     <a class="pagination-link pagination-current">1</a>
                   </li>
                   <li class="pagination-item">
@@ -482,6 +494,11 @@
                   </li>
                   <li class="pagination-item">
                     <a class="pagination-link" href="#">5</a>
+                  </li>
+                  <li class="pagination-item">
+                    <a class="pagination-next" href="#">
+                      <span class="visually-hidden">Следующая страница.</span>
+                    </a>
                   </li>
                 </ul>
               </div>
@@ -583,23 +600,12 @@
               </defs>
             </svg>
           </a>
-          <span class="footer-info-site"> Сделано в .html academy © 2021 </span>
+          <span class="footer-info-site"> Сделано в <a class="html-link" href="https://htmlacademy.ru/">.html
+              academy</a> © 2021 </span>
         </div>
       </div>
     </footer>
 
-
-
-
-
-
-
-
-
-
-
-
   </body>
-
 
 </html>
