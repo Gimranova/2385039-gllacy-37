@@ -205,6 +205,11 @@ body {
   outline-offset: -1px;
 }
 
+.header-seach-wrapper {
+  margin: 0;
+  padding: 0;
+}
+
 .header-navigation-right-entrance,
 .header-navigation-seach,
 .header-navigation-right-cart {
@@ -227,6 +232,7 @@ body {
   outline-offset: -1px;
 }
 
+/* Поиск по сайту */
 .header-navigation-seach {
   margin: 0;
   margin-right: 16px;
@@ -241,6 +247,85 @@ body {
   background-color: rgba(252, 252, 252, 0.30);
   border-radius: 50%;
 
+}
+
+.header-seach-tooltip {
+  margin: 0;
+  margin-top: 8px;
+  padding: 24px 16px;
+  width: 356px;
+  border-radius: 4px;
+  background: #FCFCFC;
+  box-shadow: 0 15px 40px 0 rgba(45, 52, 64, 0.12);
+  position: absolute;
+  top: 64px;
+  right: 409px;
+  display: none;
+}
+
+.seach-form-tooltip {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.seach-input-tooltip {
+  margin: 0;
+  padding: 0;
+  padding-left: 16px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  width: 324px;
+  border-radius: 4px;
+  border: 1px solid #B9B9B9;
+  background-color: #FFF;
+  box-sizing: border-box;
+
+}
+
+.seach-input-tooltip::placeholder {
+  margin: 0;
+  padding: 0;
+  color: #B9B9B9;
+  font-family: "Inter";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.seach-input-tooltip:active {
+  color: #2D3440;
+  font-family: "Inter";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  outline: 1px solid #B9B9B9;
+}
+
+.seach-input-tooltip:hover {
+  border-radius: 4px;
+  outline: 1px solid #2D3440;
+}
+
+.seach-input-tooltip:focus,
+.seach-input-tooltip:focus-visible {
+  border-radius: 4px;
+  outline: 2px solid #2D3440;
+}
+
+.seach-input-tooltip:disabled {
+  border-radius: 4px;
+  outline: 1px solid #B9B9B9;
+  background-color: #E7E7E7;
+  color: rgba(45, 52, 64, 0.65);
+}
+
+/* Вход в личный кабинет */
+.header-entrance-wrapper {
+  margin: 0;
+  padding: 0;
 }
 
 .header-navigation-right-entrance {
@@ -269,6 +354,180 @@ body {
   left: 16px;
 
 }
+
+/* Вход в личный кабинет - поповер */
+.header-entrance-tooltip-wrapper {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.header-entrance-tooltip {
+  margin: 0;
+  margin-top: 8px;
+  padding: 48px;
+  padding-bottom: 52px;
+  width: 420px;
+  border-radius: 4px;
+  background: #FCFCFC;
+  box-shadow: 0 15px 40px 0 rgba(45, 52, 64, 0.12);
+  position: absolute;
+  top: 64px;
+  right: 306px;
+  display: none;
+}
+
+.header-entrance-tooltip-title {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 32px;
+  color: #2D3440;
+  font-family: "Inter";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 30px;
+  display: flex;
+  justify-content: start;
+}
+
+.email-form-tooltip {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.email-input-tooltip {
+    margin: 0;
+    padding: 0;
+    padding-left: 16px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    width: 324px;
+    border-radius: 4px;
+    border: 1px solid #B9B9B9;
+    background-color: #FFF;
+    box-sizing: border-box;
+}
+
+.email-input-tooltip::placeholder {
+  color: #2D3440;
+  font-family: "Inter";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+
+.password-form {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  display: flex;
+}
+
+.password-input {
+  margin: 0;
+  padding: 0;
+  margin-top: 16px;
+  padding-left: 16px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  width: 324px;
+  border-radius: 4px;
+  border: 1px solid #B9B9B9;
+  background-color: #FFF;
+  box-sizing: border-box;
+}
+
+.password-form::after {
+  content: "";
+  position: absolute;
+  background-image: url(../images/header/password-icon.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 44px;
+  height: 4px;
+  top: 38px;
+  left: 16px;
+}
+
+.email-input-tooltip:hover,
+.password-input:hover {
+  outline: 1px solid #2D3440;
+  transition-duration: 0.3s;
+}
+
+.email-input-tooltip:empty,
+.password-input:empty {
+  color: #B9B9B9;
+}
+
+.email-input-tooltip:focus,
+.password-input:focus,
+.email-input-tooltip:focus-visible,
+.password-input:focus-visible {
+  outline: 2px solid #2D3440;
+}
+
+.email-input-tooltip:disabled,
+.password-input:disabled {
+  outline: 1px solid #B9B9B9;
+  background-color: #E7E7E7;
+}
+
+.button-entrance-wrapper {
+  margin: 0;
+  padding: 0;
+  margin-top: 32px;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.button-entrance {
+  margin: 0;
+  padding: 12px 32px;
+  width: 113px;
+  color: #FCFCFC;
+  text-align: center;
+  font-family: "Inter";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  border-radius: 26px;
+  outline: 4px solid rgba(255, 47, 100, 0.30);
+  background: #FF2F64;
+  box-shadow: 0 4px 12px 0 rgba(45, 52, 64, 0.10);
+}
+
+.registration-wrapper {
+  margin: 0;
+  padding: 0;
+  margin-left: 23px;
+  width: 113px;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
+.password-lose,
+.registration-new {
+  margin: 0;
+  padding: 0;
+  color: #2D3440;
+  font-family: "Inter";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  text-underline-offset: 3px;
+
+}
+
 
 .cart-wrapper {
   margin: 0;
@@ -300,6 +559,202 @@ body {
   outline: 1px solid red;
   outline-offset: -1px;
 }
+
+/* Хедер. Попап корзины */
+.cart-tooltip-wrapper {
+  margin: 0;
+  margin-top: 8px;
+  padding: 48px;
+  width: 441px;
+  position: absolute;
+  top: 64px;
+  right: 175px;
+  border-radius: 4px;
+  background-color: #FCFCFC;
+  box-shadow: 0 15px 40px 0 rgba(45, 52, 64, 0.12);
+  z-index: 2;
+  box-sizing: border-box;
+  display: none;
+}
+
+.tooltip-cart {
+  margin: 0;
+  padding: 0;
+}
+
+.tooltip-cart-title {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 32px;
+  color:  #2D3440;
+  font-family: "Inter";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 30px;
+}
+
+.tooltip-cart-list {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 24px;
+  width: 345px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-items: center;
+  position: relative;
+}
+
+.tooltip-cart-list::after {
+  content: "";
+  background-image: url(../images/cart-tooltip/cross-icon.svg);
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  right: 0;
+  top: 16px;
+  cursor: pointer;
+}
+
+.tooltip-cart-list:last-child {
+  padding-bottom: 32px;
+  border-bottom: 1px solid #E7E7E7;
+}
+
+.tooltip-list-image {
+  margin: 0;
+  padding: 0;
+  width: 46px;
+  height: 46px;
+  object-fit: cover;
+}
+
+.tooltip-cart-wrapper {
+  margin: 0;
+  padding: 0;
+  margin-left: 16px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+
+.tooltip-cart-link {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: #2D3440;
+  font-family: "Inter";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 22px;
+}
+
+.tooltip-list-content {
+  margin: 0;
+  padding: 0;
+  color: #B9B9B9;
+  font-family: "Inter";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.tooltip-list-count {
+  margin: 0;
+  padding: 0;
+  margin-left: auto;
+  margin-right: 68px;
+  color: #2D3440;
+  font-family: "Inter";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+}
+
+.tooltip-cart-total-wrapper {
+  margin: 0;
+  padding: 0;
+  padding-top: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.button-checkout {
+  margin: 0;
+  padding: 12px 32px;
+  width: 198px;
+  color: #FCFCFC;
+  text-align: center;
+  font-family: "Inter";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  border-radius: 26px;
+  outline: 4px solid rgba(255, 47, 100, 0.30);
+  background: #FF2F64;
+  box-shadow: 0 4px 12px 0 rgba(45, 52, 64, 0.10);
+  box-sizing: border-box;
+}
+
+.button-checkout:hover,
+.button-entrance:hover {
+  color: #2D3440;
+  border-radius: 26px;
+  outline: 4px solid #FF2F64;
+  background: rgba(252, 252, 252, 0.30);
+  transition-duration: 0.3s;
+}
+
+
+.button-checkout:active,
+.button-entrance:active {
+  color: #FCFCFC;
+  border-radius: 26px;
+  outline: 2px solid var(--basic-extra-dark, #2D3440);
+  background: #FEAFC3;
+  box-shadow: 0 4px 12px 0 rgba(45, 52, 64, 0.10);
+  transition-duration: 0.3s;
+}
+
+.button-checkout:focus,
+.button-checkout:focus-visible,
+.button-entrance:focus,
+.button-entrance:focus-visible {
+  color: #FCFCFC;
+  border-radius: 26px;
+  outline: 2px solid #2D3440;
+  background: #FF2F64;
+  box-shadow: 0 4px 12px 0 rgba(45, 52, 64, 0.10);
+}
+
+.button-checkout:disabled,
+.button-entrance:disabled {
+  color: #565C66;
+  border-radius: 26px;
+  outline: 4px solid rgba(185, 185, 185, 0.30);
+  background: #B9B9B9;
+}
+
+.tooltip-cart-total {
+  margin: 0;
+  padding: 0;
+  color: #2D3440;
+  font-family: "Inter";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 22px;
+}
+
 
 /* Открывающийся подкаталог продукции */
 .subcatalog {
@@ -490,7 +945,7 @@ body {
 
 }
 
-.section-slider-order {
+.button-order {
   margin: 0;
   padding: 12px 32px;
   margin-top: 48px;
@@ -503,7 +958,7 @@ body {
   font-weight: 700;
   line-height: 20px;
   border-radius: 26px;
-  border: 4px solid rgba(252, 252, 252, 0.4);
+  outline: 4px solid rgba(252, 252, 252, 0.4);
   background-color: #FCFCFC;
   box-shadow: 0 4px 12px 0 rgba(45, 52, 64, 0.1);
 }
@@ -680,13 +1135,43 @@ body {
   font-weight: 700;
   line-height: 20px;
   border-radius: 26px;
-  border: 4px solid rgba(252, 252, 252, 0.40);
+  outline: 4px solid rgba(252, 252, 252, 0.40);
   background-color: #FCFCFC;
   box-shadow: 0 4px 12px 0 rgba(45, 52, 64, 0.10);
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
+
+.button-order:hover,
+.button-promotion:hover {
+  outline: 4px solid #FCFCFC;
+  background-color: rgba(252, 252, 252, 0.40);
+  box-shadow: 0 4px 15px 0 rgba(133, 133, 133, 0.15);
+  transition-duration: 0.3s;
+}
+
+.button-order:active,
+.button-promotion:active {
+  outline: 2px solid #2D3440;
+  background-color: #FCFCFC;
+  transition-duration: 0.3s;
+}
+
+.button-order:focus,
+.button-promotion:focus,
+.button-order:focus-visible,
+.button-promotion:focus-visible {
+  outline: 2px solid #2D3440;
+  background-color:rgba(252, 252, 252, 0.50);
+  background: #FCFCFC;
+  transition-duration: 0.3s;
+}
+
+.button-order:disabled,
+.button-promotion:disabled {
+  color: #B9B9B9;
+  outline: 4px solid rgba(252, 252, 252, 0.40);
+  background-color: #E7E7E7;
+}
+
 
 /* Раздел популярной продукции */
 .section-popular {
@@ -741,15 +1226,24 @@ body {
   width: 270px;
   display: flex;
   flex-wrap: wrap;
-  border-radius: 8px;
-  background: url(../images/section-popular/substrate.svg) no-repeat;
-  background-position: bottom;
-  background-size: auto;
+  align-self: self-start;
+  position: relative;
+
 
   outline: 1px solid red;
   outline-offset: -1px;
 }
 
+.section-popular-card::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: calc(100% - 51px);
+  width: 270px;
+  background-color: #FCFCFC;
+  border-radius: 8px;
+  z-index: -1;
+}
 
 .section-popular-image {
   padding: 0;
@@ -796,6 +1290,7 @@ body {
   font-style: normal;
   font-weight: 400;
   line-height: 22px;
+  text-align: center;
 
   outline: 1px solid red;
   outline-offset: -1px;
@@ -839,6 +1334,18 @@ body {
   outline: 1px solid red;
   outline-offset: -1px;
 }
+
+rect:focus {
+  border-radius: 26px;
+  outline: 2px solid #FF2F64;
+fill: rgba(252, 252, 252, 0.30);
+fill: #2D3440;
+
+}
+.section-popular-cart:hover {
+
+}
+
 
 /* Раздел о преимуществах компании */
 .section-advantages-wrapper {
@@ -1065,9 +1572,6 @@ body {
   font-style: normal;
   font-weight: 700;
   line-height: 30px;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 .mailing-form-wrapper {
@@ -1076,9 +1580,6 @@ body {
   background: url(../images/section-mailing/mailing-form-image.jpg) no-repeat center;
   border-radius: 16px;
   background-size: cover;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 .mailing-form {
@@ -1087,9 +1588,6 @@ body {
   width: 558px;
   border-radius: 16px;
   background: #FFF;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 .mailing-form-info {
@@ -1103,10 +1601,6 @@ body {
   font-style: normal;
   font-weight: 400;
   line-height: 22px;
-
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 .email-form {
@@ -1126,16 +1620,12 @@ body {
   border: 1px solid #B9B9B9;
   background-color: #FFF;
   box-sizing: border-box;
-
   color: #2D3440;
   font-family: "Inter";
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 20px;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 .email-input:active {
@@ -1161,6 +1651,7 @@ body {
 .button-subscribe {
   margin: 0;
   padding: 12px 32px;
+  margin-left: 10px;
   width: 160px;
   color: #FCFCFC;
   text-align: center;
@@ -1170,7 +1661,7 @@ body {
   font-weight: 700;
   line-height: 20px;
   border-radius: 26px;
-  border: 4px solid rgba(255, 47, 100, 0.30);
+  outline: 4px solid rgba(255, 47, 100, 0.30);
   background-color: #FF2F64;
   box-shadow: 0 4px 12px 0 rgba(45, 52, 64, 0.10);
 }
@@ -1264,7 +1755,7 @@ body {
 
 .section-delivery-form {
   padding: 0;
-  margin: 30px 40px 40px 40px;
+  margin: 32px 40px 40px 40px;
   width: 420px;
   display: flex;
   flex-wrap: wrap;
@@ -1410,7 +1901,7 @@ body {
   font-weight: 700;
   line-height: 20px;
   border-radius: 26px;
-  border: 4px solid rgba(255, 47, 100, 0.30);
+  outline: 4px solid rgba(255, 47, 100, 0.30);
   background-color: #FF2F64;
   box-shadow: 0 4px 12px 0 rgba(45, 52, 64, 0.10);
   display: flex;
@@ -1536,9 +2027,9 @@ body {
   outline-offset: -1px;
 }
 
-.feedback-form-link {
+.button-feedback {
   margin: 0;
-  padding: 9px 32px;
+  padding: 12px 32px;
   margin-top: 32px;
   width: 258px;
   text-decoration: none;
@@ -1550,12 +2041,36 @@ body {
   font-weight: 700;
   line-height: 20px;
   border-radius: 26px;
-  border: 4px solid rgba(255, 47, 100, 0.30);
+  outline: 4px solid rgba(255, 47, 100, 0.30);
   background-color: #FF2F64;
   box-shadow: 0 4px 12px 0 rgba(45, 52, 64, 0.10);
+}
 
-  outline: 1px solid red;
-  outline-offset: -1px;
+.button-feedback:hover,
+.button-delivery-subscribe:hover,
+.button-subscribe:hover {
+  outline: 4px solid #FF2F64;
+  background-color: rgba(252, 252, 252, 0.30);
+  color: #2D3440;
+  transition-duration: 0.3s;
+}
+
+.button-feedback:active,
+.button-delivery-subscribe:active,
+.button-subscribe:active {
+  outline: 2px solid #2D3440;
+  background-color: #FEAFC3;
+  transition-duration: 0.3s;
+}
+
+.button-feedback:focus,
+.button-delivery-subscribe:focus,
+.button-subscribe:focus,
+.button-feedback:focus-visible,
+.button-delivery-subscribe:focus-visible,
+.button-subscribe:focus-visible {
+  outline: 2px solid #2D3440;
+  transition-duration: 0.3s;
 }
 
 /* Подвал сайта */
@@ -1614,11 +2129,23 @@ body {
   width: 28px;
   height: 28px;
 
+
   outline: 1px solid red;
   outline-offset: -1px;
 }
 
+.footer-social-tme:focus path,
+.footer-social-vk:focus path,
+.footer-social-youtube:focus path {
+  stroke: #2D3440;
+  stroke-opacity: 1;
+  stroke-width: 2px;
+  color: #2D3440;
+  outline: none;
+  fill: #FCFCFC;
 
+
+}
 
 .section-regulations {
   margin: 0;
@@ -1737,16 +2264,20 @@ body {
   font-style: normal;
   font-weight: 400;
   line-height: 16px;
-  position: relative;
+
 }
 
-.footer-info-site::before {
-  content: "";
-  position: absolute;
-  width: 82px;
-  height: 1px;
-  background-color: rgba(45, 52, 64, 0.5);
-  bottom: 0;
-  left: 66px;
-
+.html-link {
+  margin: 0;
+  padding: 0;
+  color: #2D3440;
+  font-family: "Inter";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  text-decoration: underline;
+  text-decoration-color: rgba(45, 52, 64, 0.5);
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
 }

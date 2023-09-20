@@ -60,18 +60,85 @@
             <a class="header-phone-link" href="tel:+78005558628">+7 800 555-86-28
             </a>
 
-            <a class="header-navigation-seach" href="#">
-              <span class="visually-hidden"> Поиск продукции. </span>
-            </a>
+            <!--Поиск по сайту-->
+            <div class="header-seach-wrapper">
+              <a class="header-navigation-seach" href="#">
+                <span class="visually-hidden"> Поиск продукции. </span>
+              </a>
+            </div>
+            <div class="header-seach-tooltip">
+              <label class="seach-form-tooltip">
+                <input class="seach-input-tooltip" type="search" placeholder="Поиск по сайту">
+              </label>
+            </div>
 
-            <a class="header-navigation-right-entrance" href="#">
-              Вход
-            </a>
+            <!--Вход в личный кабинет-->
+            <div class="header-entrance-wrapper">
+              <a class="header-navigation-right-entrance" href="#">
+                Вход
+              </a>
+            </div>
+
+            <div class="header-entrance-tooltip">
+              <h4 class="header-entrance-tooltip-title">Личный кабинет</h4>
+              <label class="email-form-tooltip">
+                <input class="email-input-tooltip" type="email" placeholder="email@example.com">
+              </label>
+              <label class="password-form">
+                <input class="password-input" type="password" placeholder="">
+              </label>
+              <div class="button-entrance-wrapper">
+                <button class="button button-entrance" type="button">
+                  Войти
+                </button>
+                <div class="registration-wrapper">
+                  <a class="password-lose" href="#">
+                    Забыли пароль?
+                  </a>
+                  <a class="registration-new" href="#">
+                    Регистрация
+                  </a>
+                </div>
+              </div>
+
+            </div>
+
+
             <div class="cart-wrapper">
               <a class="header-navigation-right-cart" href="#">
                 2 товара
               </a>
             </div>
+            <!--Хедер. Попап корзины-->
+            <div class="cart-tooltip-wrapper">
+              <div class="tooltip-cart" role="tooltip" id="tooltip-label-cart">
+                <h4 class="tooltip-cart-title">Корзина</h4>
+                <div class="tooltip-cart-list">
+                  <img class="tooltip-list-image" width="46" height="46" src="./images/cart-tooltip/raspberry.svg"
+                    alt="Фото мороженого Малинка.">
+                  <div class="tooltip-cart-wrapper">
+                    <a class="tooltip-cart-link" href="#">Малинка</a>
+                    <span class="tooltip-list-content">1 кг х 310 ₽</span>
+                  </div>
+                  <span class="tooltip-list-count">310 ₽</span>
+                </div>
+                <div class="tooltip-cart-list">
+                  <img class="tooltip-list-image" width="46" height="46" src="./images/cart-tooltip/bubble-gum.svg"
+                    alt="Фото мороженого Бабл-гам.">
+                  <div class="tooltip-cart-wrapper">
+                    <a class="tooltip-cart-link" href="#">Бабл-гам</a>
+                    <span class="tooltip-list-content">1,5 кг х 320 ₽</span>
+                  </div>
+                  <span class="tooltip-list-count">480 ₽</span>
+                </div>
+              </div>
+              <div class="tooltip-cart-total-wrapper">
+                <button class="button button-checkout" type="button">Оформить заказ</button>
+                <span class="tooltip-cart-total">Итого: 790 ₽</span>
+              </div>
+
+            </div>
+
           </nav>
         </div>
       </div>
@@ -89,7 +156,7 @@
             Натуральное мороженое из свежих сливок и&nbsp;молока с вкуснейшим
             клубничным джемом – это&nbsp;идеальный десерт для всей семьи.
           </p>
-          <button class="button section-slider-order" type="button">
+          <button class="button button-order" type="button">
             Заказать
           </button>
           <div class="slider-controls">
@@ -199,14 +266,14 @@
                 src="./images/section-popular/popular-image-1.jpg" alt="Фото мороженого Малинка.">
               <a class="section-popular-link" href="#"> Малинка </a>
               <p class="section-popular-info">
-                Сливочное мороженое с малиновым джемом
+                Сливочное мороженое с&nbsp;малиновым джемом
               </p>
               <div class="price-cart-wrapper">
                 <span class="section-popular-price"> 310 ₽/кг </span>
                 <a class="section-popular-cart" href="#">
                   <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
-                    fill="none" viewBox="0 0 32 32">
-                    <rect width="32" height="32" fill="#FF2F64" rx="16" />
+                    fill="currentColor" viewBox="0 0 32 32">
+                    <rect class="rect-class" width="32" height="32" fill="#FF2F64" rx="16" />
                     <path fill="#FCFCFC" fill-rule="evenodd"
                       d="M9.167 9.25a.667.667 0 0 0 0 1.333h1.77l.468 2.336a.656.656 0 0 0 .011.053l.967 4.833a1.826 1.826 0 0 0 1.819 1.47h5.62a1.826 1.826 0 0 0 1.819-1.47l.001-.005.927-4.861a.667.667 0 0 0-.655-.792h-9.303l-.473-2.361a.667.667 0 0 0-.654-.536H9.167Zm4.524 8.294-.813-4.064h8.23l-.775 4.067a.492.492 0 0 1-.492.395H14.183a.493.493 0 0 1-.492-.397Zm-1.134 3.961a1.246 1.246 0 1 1 2.492 0 1.246 1.246 0 0 1-2.492 0Zm6.374 0a1.246 1.246 0 1 1 2.491 0 1.246 1.246 0 0 1-2.491 0Z"
                       clip-rule="evenodd" />
@@ -221,7 +288,7 @@
                 src="./images/section-popular/popular-image-2.jpg" alt="Фото мороженого Фисташка.">
               <a class="section-popular-link" href="#"> Фисташка </a>
               <p class="section-popular-info">
-                Фисташковый пломбир с кусочками шоколада
+                Фисташковый пломбир с&nbsp;кусочками шоколада
               </p>
               <div class="price-cart-wrapper">
                 <span class="section-popular-price"> 340 ₽/кг </span>
@@ -242,7 +309,7 @@
               <img class="section-popular-image" width="168" height="168"
                 src="./images/section-popular/popular-image-3.jpg" alt="Фото мороженого Черника.">
               <a class="section-popular-link" href="#"> Черника </a>
-              <p class="section-popular-info">Крем-брюле с черничным джемом</p>
+              <p class="section-popular-info">Крем-брюле с&nbsp;черничным джемом</p>
               <div class="price-cart-wrapper">
                 <span class="section-popular-price"> 330 ₽/кг </span>
                 <a class="section-popular-cart" href="#">
@@ -336,7 +403,7 @@
         <div class="section-mailing-wrapper">
           <a class="section-mailing-news" href="#"> Новое в нашем блоге </a>
           <a class="section-mailing-list" href="#">
-            10 способов сервировки фруктовых щербетов к столу
+            10 способов сервировки фруктовых щербетов к&nbsp;столу
           </a>
         </div>
         <div class="mailing-form-wrapper">
@@ -365,7 +432,7 @@
             Доставка любимого мороженого на дом
           </h3>
           <p class="section-delivery-info">
-            Хочется полакомиться любимым десертом, но нет времени съездить в
+            Хочется полакомиться любимым десертом, но&nbsp;нет времени съездить в
             магазин? Закажите доставку мороженого на дом, и курьер привезёт вам
             ваш заказ в течение часа!
           </p>
@@ -413,7 +480,7 @@
             +7 (812) 812-12-12
           </a>
           <p class="section-feedback-working"> (с 10 до 20 ежедневно) </p>
-          <button class="feedback-form-link" type="submit"> Форма обратной связи </button>
+          <button class="button button-feedback" type="submit"> Форма обратной связи </button>
 
         </section>
       </div>
@@ -501,7 +568,8 @@
               </defs>
             </svg>
           </a>
-          <span class="footer-info-site"> Сделано в .html academy © 2021 </span>
+          <span class="footer-info-site"> Сделано в <a class="html-link" href="https://htmlacademy.ru/">.html
+              academy</a> © 2021 </span>
         </div>
       </div>
     </footer>
