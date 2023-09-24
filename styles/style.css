@@ -233,6 +233,12 @@ body {
 }
 
 /* Поиск по сайту */
+.header-seach-wrapper {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
 .header-navigation-seach {
   margin: 0;
   margin-right: 16px;
@@ -260,7 +266,7 @@ body {
   position: absolute;
   top: 64px;
   right: 409px;
-  display: none;
+  /*display: none;*/
 }
 
 .seach-form-tooltip {
@@ -398,16 +404,16 @@ body {
 }
 
 .email-input-tooltip {
-    margin: 0;
-    padding: 0;
-    padding-left: 16px;
-    padding-top: 14px;
-    padding-bottom: 14px;
-    width: 324px;
-    border-radius: 4px;
-    border: 1px solid #B9B9B9;
-    background-color: #FFF;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  padding-left: 16px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  width: 324px;
+  border-radius: 4px;
+  border: 1px solid #B9B9B9;
+  background-color: #FFF;
+  box-sizing: border-box;
 }
 
 .email-input-tooltip::placeholder {
@@ -586,7 +592,7 @@ body {
   margin: 0;
   padding: 0;
   margin-bottom: 32px;
-  color:  #2D3440;
+  color: #2D3440;
   font-family: "Inter";
   font-size: 24px;
   font-style: normal;
@@ -1160,7 +1166,7 @@ body {
 .button-order:focus-visible,
 .button-promotion:focus-visible {
   outline: 2px solid #2D3440;
-  background-color:rgba(252, 252, 252, 0.50);
+  background-color: rgba(252, 252, 252, 0.50);
   background: #FCFCFC;
   transition-duration: 0.3s;
 }
@@ -1326,24 +1332,36 @@ body {
 .section-popular-cart {
   margin: 0;
   padding: 0;
+  padding-top: 8px;
   margin-left: auto;
   width: 32px;
   height: 32px;
   cursor: pointer;
+  background-color: #FF2F64;
+  border-radius: 50%;
+  text-align: center;
+  color: #FCFCFC;
 
   outline: 1px solid red;
   outline-offset: -1px;
 }
 
-rect:focus {
-  border-radius: 26px;
-  outline: 2px solid #FF2F64;
-fill: rgba(252, 252, 252, 0.30);
-fill: #2D3440;
-
-}
 .section-popular-cart:hover {
+  color: #2D3440;
+  outline: 2px solid #FF2F64;
+  background-color: rgba(252, 252, 252, 0.30);
+}
 
+.section-popular-cart:active {
+  color: #2D3440;
+  outline: 2px solid #FF2F64;
+  background-color: #FFCBD8;
+}
+
+.section-popular-cart:focus,
+.section-popular-cart:focus-visible {
+  outline: 2px solid #2D3440;
+  background-color: #FF2F64;
 }
 
 
@@ -2094,7 +2112,6 @@ fill: #2D3440;
   display: flex;
   flex-wrap: wrap;
   justify-content: start;
-
 }
 
 /* Социальные сети */
@@ -2105,8 +2122,7 @@ fill: #2D3440;
   width: 104px;
   display: flex;
 
-  outline: 1px solid red;
-  outline-offset: -1px;
+
 }
 
 .footer-social-list {
@@ -2114,38 +2130,81 @@ fill: #2D3440;
   padding: 0;
   list-style-type: none;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 104px;
-  text-align: center;
+
+}
+
+.social-item:not(:last-child) {
+  margin-right: 15px;
 }
 
 
-.footer-social-tme,
-.footer-social-vk,
-.footer-social-youtube {
+.social-tme,
+.social-vk,
+.social-youtube {
   margin: 0;
   padding: 0;
-  width: 28px;
-  height: 28px;
-
-
-  outline: 1px solid red;
-  outline-offset: -1px;
-}
-
-.footer-social-tme:focus path,
-.footer-social-vk:focus path,
-.footer-social-youtube:focus path {
-  stroke: #2D3440;
-  stroke-opacity: 1;
-  stroke-width: 2px;
-  color: #2D3440;
-  outline: none;
-  fill: #FCFCFC;
+  display: flex;
+  width: 24px;
+  height: 24px;
+  outline: 2px solid rgba(252, 252, 252, 0.3);
+  border-radius: 50%;
+  position: relative;
+  transition: outline-color 0.1s ease-out;
 
 
 }
+
+.social-tme::after,
+.social-vk::after,
+.social-youtube::after {
+  margin: 0;
+  padding: 0;
+  content: "";
+  width: 80%;
+  height: 80%;
+  background-color: transparent;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: -1;
+  transition: background-color 0.1s ease-out, opacity 0.1s ease-out;
+}
+
+.social-tme:hover::after,
+.social-vk:hover::after,
+.social-youtube:hover::after,
+.social-tme:active::after,
+.social-vk:active::after,
+.social-youtube:active::after,
+.social-tme:focus::after,
+.social-vk:focus::after,
+.social-youtube:focus::after {
+  background-color: #2D3440;
+}
+
+
+.social-tme:hover,
+.social-vk:hover,
+.social-youtube:hover {
+  outline-color: rgba(252, 252, 252, 0.5);
+}
+
+.social-tme:active,
+.social-vk:active,
+.social-youtube:active {
+  outline-color: rgba(252, 252, 252, 0.5);
+  opacity: 0.5;
+}
+
+.social-tme:focus,
+.social-vk:focus,
+.social-youtube:focus {
+  outline-color: #2D3440;
+  outline-offset: 0;
+}
+
 
 .section-regulations {
   margin: 0;
