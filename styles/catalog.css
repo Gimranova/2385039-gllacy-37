@@ -52,6 +52,12 @@
   line-height: 20px;
 }
 
+.breadcrumbs-link-current {
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid #2D3440;
+}
+
 .breadcrumbs-item::after {
   content: "";
   position: absolute;
@@ -157,10 +163,6 @@
   border: none;
   border-radius: 20px;
   background-color: rgba(252, 252, 252, 0.3);
-
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 .select-control-wrapper {
@@ -179,10 +181,23 @@
   height: 16px;
   top: 10px;
   right: 10px;
-  z-index: -1;
+}
 
-  outline: 1px solid red;
-  outline-offset: -1px;
+.select-control-wrapper:hover {
+  background-color: rgba(252, 252, 252, 0.5);
+  border-radius: 20px;
+}
+
+.select-control-wrapper:focus {
+  background-color: rgba(252, 252, 252, 0.4);
+  border-radius: 26px;
+  outline: 2px solid #FCFCFC;
+  outline-style: none;
+  border: none;
+}
+.select-control-wrapper:focus-visible {
+  outline-style: none;
+  border: none;
 }
 
 .catalog-filter-price {
@@ -245,6 +260,27 @@
   border-radius: 50%;
   cursor: pointer;
   box-sizing: border-box;
+}
+
+.range-toggle:hover {
+  background-image: url(../images/catalog/range-hover.svg);
+  background-repeat: no-repeat;
+  border: none;
+}
+
+.range-toggle:active{
+  width: 16px;
+  height: 16px;
+  background-image: none;
+  background-color: #2D3440;
+  border-radius: 50%;
+}
+
+.range-toggle:focus,
+.range-toggle:focus-visible {
+  background-image: url(../images/catalog/range-hover.svg);
+  background-repeat: no-repeat;
+  background-color: #2D3440;
 }
 
 .toggle-min {
@@ -410,7 +446,6 @@
   position: relative;
   margin: 0;
   padding: 0;
-
 }
 
 
@@ -418,6 +453,32 @@
   background-image: url(../images/catalog/check-on.svg);
   background-repeat: no-repeat;
 }
+
+.control-checkbox:checked:hover {
+  background-image: url(../images/catalog/checkbox-hover.svg);
+  background-repeat: no-repeat;
+}
+
+.control-checkbox:hover {
+  background-image: url(../images/catalog/check-on-hover.svg);
+  background-repeat: no-repeat;
+}
+
+.control-checkbox:checked:disabled,
+.control-checkbox:disabled,
+.control-radio:checked:disabled,
+.control-radio:disabled {
+  opacity: 0.5;
+}
+
+/*.control-checkbox:checked:focus-visible,
+.control-checkbox:checked:focus,
+.control-checkbox:focus,
+.control-checkbox:focus-visible,
+.control-radio:focus-visible {
+  outline-style: none;
+  border-style: none;
+}*/
 
 .control-radio {
   width: 16px;
@@ -431,10 +492,19 @@
 }
 
 .control-radio:checked {
-  background-image: url(../images/catalog/radio.svg);
+  background-image: url(../images/catalog/radio-on.svg);
   background-repeat: no-repeat;
 }
 
+.control-radio:checked:hover {
+  background-image: url(../images/catalog/radio-on-hover.svg);
+  background-repeat: no-repeat;
+}
+
+.control-radio:hover {
+  background-image: url(../images/catalog/radio-icon-hover.svg);
+  background-repeat: no-repeat;
+}
 
 
 .button-filter-apply {
@@ -450,13 +520,32 @@
   font-weight: 700;
   line-height: 20px;
   border-radius: 20px;
-  border: 2px solid #FCFCFC;
-  background: rgba(252, 252, 252, 0.30);
+  outline: 2px solid #FCFCFC;
+  background-color: rgba(252, 252, 252, 0.30);
   box-sizing: border-box;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
+
+.button-filter-apply:hover {
+  outline: 2px solid rgba(252, 252, 252, 0.30);
+  background-color: #FCFCFC;
+}
+
+.button-filter-apply:active {
+  background-color: rgba(252, 252, 252, 0.50);
+}
+
+.button-filter-apply:focus,
+.button-filter-apply:focus-visible {
+  outline: 2px solid #2D3440;
+  background: rgba(252, 252, 252, 0.30);
+}
+
+.button-filter-apply:disabled {
+  outline: 2px solid #FCFCFC;
+  opacity: 0.4;
+  background: rgba(252, 252, 252, 0.30);
+}
+
 
 
 /* Каталог товаров */
