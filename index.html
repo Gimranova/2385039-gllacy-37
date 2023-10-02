@@ -189,8 +189,16 @@
 
         <div class="section-slider-image-wrapper">
           <div class="slider-image-wrapper-1">
+            <button class="button slider-arrow-left" type="button">
+              <img class="arrow-left" src="./images/section-slider/arrow-left-icon.svg" width="16" height="16"
+                alt="Стрелка-переключатель влево.">
+            </button>
             <img class="section-slider-image-1" width="328" height="507"
               src="./images/section-slider/slider-image-1.jpg" alt="Фото пломбира с клубничным джемом.">
+            <button class="button slider-arrow-right" type="button">
+              <img class="arrow-right" src="./images/section-slider/arrow-right-icon.svg" width="16" height="16"
+                alt="Стрелка-переключатель вправо.">
+            </button>
           </div>
           <div class="slider-image-wrapper-2">
             <img class="section-slider-image-2" width="66" height="150" src="./images/section-slider/slider-image-2.jpg"
@@ -463,16 +471,26 @@
               Дата
               <input class="delivery-form-date-input" type="text" placeholder="01.04.2020">
             </label>
-
+            <div class="delivery-form-date-tooltip">
+              <span class="date-form-tooltip-toggle"></span>
+              <div class="form-date-tooltip-info" role="tooltip" id="date-tooltip">
+                Введите желаемую дату доставки
+              </div>
+            </div>
             <label class="delivery-form-tel">
               Телефон
               <input class="delivery-form-tel-input" type="tel" placeholder="+7 800 999-00-00">
             </label>
-
             <label class="delivery-form-address">
               Адрес
               <input class="delivery-form-address-input" type="text" placeholder="ул. Большая Конюшенная, 19/8">
             </label>
+            <div class="delivery-form-address-tooltip">
+              <span class="address-form-tooltip-toggle"></span>
+              <div class="form-address-tooltip-info" role="tooltip" id="address-tooltip">
+                Введите название улицы, дома и квартиры
+              </div>
+            </div>
             <button class="button button-delivery-subscribe" type="submit">
               Отправить
             </button>
