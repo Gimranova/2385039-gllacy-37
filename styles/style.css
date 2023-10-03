@@ -38,10 +38,21 @@ body {
   flex-wrap: wrap;
   min-height: 100%;
   width: 100%;
-  background-color: #FEAFC3;
 
   outline: 1px solid blue;
   outline-offset: -1px;
+}
+
+.body-theme-pink {
+  background-color: #FEAFC3;
+}
+
+.body-theme-blue {
+  background-color: #69A9FF;
+}
+
+.body-theme-yellow {
+  background-color: #FCC850;
 }
 
 .visually-hidden {
@@ -960,22 +971,60 @@ body {
   outline-offset: -1px;
 }
 
+
+
 .section-slider-wrapper {
   margin: 0;
   padding: 0;
-  width: 525px;
-  padding-left: 70px;
-
 
   outline: 1px solid red;
   outline-offset: -1px;
+}
+
+.section-slider-list {
+  margin: 0;
+  padding: 0;
+}
+
+.section-slider-theme-pink,
+.section-slider-theme-blue,
+.section-slider-theme-yellow {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.section-slider-theme-pink {
+  display: none;
+}
+
+.section-slider-theme-blue {
+  display: none;
+}
+
+.section-slider-theme-yellow {
+  display: none;
+}
+
+.section-slider-active {
+  display: flex;
+}
+
+
+.slider-info-wrapper {
+  margin: 0;
+  padding: 0;
+  padding-left: 70px;
+  width: 525px;
+  display: flex;
+  flex-direction: column;
 }
 
 .section-slider-title {
   margin: 0;
   padding: 0;
   margin-top: 136px;
-  width: 470px;
+  width: 455px;
   color: #2D3440;
   font-family: "Inter";
   font-size: 36px;
@@ -1008,105 +1057,16 @@ body {
   outline-offset: -1px;
 
 }
-
-/* Пагинация слайдеров */
-
-.slider-pagination-wrapper {
-  margin: 0;
-  padding: 0;
-
-}
-
-.slider-pagination {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-  width: 52px;
-  display: flex;
-  flex-wrap: nowrap;
-  align-items: end;
-  justify-content: start;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
-
-.slider-radio {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  border: none;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  appearance: none;
-  background-color: rgba(252, 252, 252, 0.3);
-}
-
-.slider-radio:not(:last-child) {
-  margin-right: 8px;
-}
-
-.slider-radio:checked {
-  background-color: #FCFCFC;
-}
-
-.slider-radio:hover,
-.slider-radio:checked:hover {
-  border-radius: 100px;
-  outline: 1px solid #FCFCFC;
-  background-color: rgba(252, 252, 252, 0.30);
-  transition-duration: 0.3s;
-}
-
-.slider-radio:active,
-.slider-radio:checked:active {
-  background-color: rgba(252, 252, 252, 0.5);
-  outline: none;
-}
-
-.slider-radio:focus,
-.slider-radio:checked:focus .slider-radio:focus-visible,
-.slider-radio:checked:focus-visible {
-  border-radius: 100px;
-  outline: 1px solid #2D3440;
-  background-color: rgba(252, 252, 252, 0.3);
-}
-
-
-.button-order {
-  margin: 0;
-  padding: 12px 32px;
-  margin-top: 48px;
-  width: 139px;
-  color: #2D3440;
-  text-align: center;
-  font-family: "Inter";
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 20px;
-  border-radius: 26px;
-  outline: 4px solid rgba(252, 252, 252, 0.4);
-  background-color: #FCFCFC;
-  box-shadow: 0 4px 12px 0 rgba(45, 52, 64, 0.1);
-}
-
 .section-slider-image-wrapper {
   margin: 0;
   padding: 0;
   position: relative;
   display: flex;
-
-
 }
 
 .slider-image-wrapper-1 {
   margin: 0;
-  padding: 21px 18px 26px 18px;
+  padding: 21px 18px 18px 18px;
   width: 363px;
   display: flex;
   justify-content: center;
@@ -1182,6 +1142,9 @@ body {
   justify-content: center;
 }
 
+.slider-image-wrapper-2 {
+  margin-left: 37px;
+}
 
 .section-slider-image-2,
 .section-slider-image-3 {
@@ -1194,7 +1157,6 @@ body {
   object-fit: cover;
   display: flex;
   justify-content: center;
-
 }
 
 
@@ -1212,13 +1174,110 @@ body {
   bottom: 200px;
 }
 
+.body-theme-blue .slider-image-wrapper-1::before,
+.body-theme-blue .slider-image-wrapper-2::before,
+.body-theme-blue .slider-image-wrapper-3::before {
+  background-color: #9FC8FF;
+}
+
+.body-theme-yellow .slider-image-wrapper-1::before,
+.body-theme-yellow .slider-image-wrapper-2::before,
+.body-theme-yellow .slider-image-wrapper-3::before  {
+  background-color: #FCDC92;
+}
+
+/* Пагинация слайдеров */
+.slider-pagination-wrapper {
+  margin: 0;
+  padding: 0;
+}
+
+.slider-pagination {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  width: 52px;
+  display: flex;
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+}
+
+.slider-radio {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  appearance: none;
+  background-color: rgba(252, 252, 252, 0.3);
+}
+
+.slider-radio:not(:last-child) {
+  margin-right: 8px;
+}
+
+.slider-radio:checked {
+  background-color: #FCFCFC;
+}
+
+.slider-radio:hover,
+.slider-radio:checked:hover {
+  border-radius: 100px;
+  outline: 1px solid #FCFCFC;
+  background-color: rgba(252, 252, 252, 0.30);
+  transition-duration: 0.3s;
+}
+
+.slider-radio:active,
+.slider-radio:checked:active {
+  background-color: rgba(252, 252, 252, 0.5);
+  outline: none;
+}
+
+.slider-radio:focus,
+.slider-radio:checked:focus .slider-radio:focus-visible,
+.slider-radio:checked:focus-visible {
+  border-radius: 100px;
+  outline: 1px solid #2D3440;
+  background-color: rgba(252, 252, 252, 0.3);
+}
+
+
+.button-order {
+  margin: 0;
+  padding: 12px 32px;
+  margin-top: 48px;
+  width: 139px;
+  color: #2D3440;
+  text-align: center;
+  font-family: "Inter";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  border-radius: 26px;
+  outline: 4px solid rgba(252, 252, 252, 0.4);
+  background-color: #FCFCFC;
+  box-shadow: 0 4px 12px 0 rgba(45, 52, 64, 0.1);
+}
+
+
 /* Социальные сети */
 .slider-social-links {
   margin: 0;
   padding: 0;
   width: 278px;
-  display: flex;
+  display: inline-flex;
   align-items: end;
+  position: absolute;
+  bottom: -8px;
+  right: 0;
 }
 
 .slider-social-list {
@@ -2074,8 +2133,8 @@ body {
 .form-address-tooltip-info::before {
   content: "";
   position: absolute;
-  width: 10px;
-  height: 10px;
+  width: 11px;
+  height: 11px;
   border-bottom: 1px solid #B9B9B9;
   border-left: 1px solid #B9B9B9;
   transform: rotate(45deg);

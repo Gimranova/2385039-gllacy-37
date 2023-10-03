@@ -8,7 +8,10 @@
     <link rel="icon" sizes="32x32" href="./images/favicon.png" type="image/png">
   </head>
 
-  <body>
+  <!--Для смены фона на голубой - класс body-theme-pink заменить на класс body-theme-blue;
+  на желтый - класс body-theme-pink заменить на класс body-theme-yellow-->
+
+  <body class="body body-theme-pink">
     <!--Шапка главной страницы сайта-->
     <header class="header">
       <h1 class="visually-hidden">Каталог продукции компании Глейси.</h1>
@@ -149,17 +152,128 @@
     <main class="main-container">
       <!--Слайдер-секция-->
       <section class="section-slider">
+        <h2 class="visually-hidden">Галарея.</h2>
         <div class="section-slider-wrapper">
-          <h2 class="section-slider-title">
-            Нежный пломбир с&nbsp;клубничным&nbsp;джемом
-          </h2>
-          <p class="section-slider-info">
-            Натуральное мороженое из свежих сливок и&nbsp;молока с вкуснейшим
-            клубничным джемом – это&nbsp;идеальный десерт для всей семьи.
-          </p>
-          <button class="button button-order" type="button">
-            Заказать
-          </button>
+          <ul class="section-slider-list">
+            <li class="section-slider-active section-slider-theme-pink">
+              <div class="slider-info-wrapper">
+                <h3 class="section-slider-title">
+                  Нежный пломбир с&nbsp;клубничным&nbsp;джемом
+                </h3>
+                <p class="section-slider-info">
+                  Натуральное мороженое из свежих сливок и&nbsp;молока с вкуснейшим
+                  клубничным джемом – это&nbsp;идеальный десерт для всей семьи.
+                </p>
+                <button class="button button-order" type="button">
+                  Заказать
+                </button>
+              </div>
+              <div class="section-slider-image-wrapper">
+                <div class="slider-image-wrapper-1">
+                  <button class="button slider-arrow-left" type="button">
+                    <img class="arrow-left" src="./images/section-slider/arrow-left-icon.svg" width="16" height="16"
+                      alt="Стрелка-переключатель влево.">
+                  </button>
+                  <img class="section-slider-image-1" width="328" height="507"
+                    src="./images/section-slider/slider-image-1.jpg" alt="Фото пломбира с клубничным джемом.">
+                  <button class="button slider-arrow-right" type="button">
+                    <img class="arrow-right" src="./images/section-slider/arrow-right-icon.svg" width="16" height="16"
+                      alt="Стрелка-переключатель вправо.">
+                  </button>
+                </div>
+                <div class="slider-image-wrapper-2">
+                  <img class="section-slider-image-2" width="66" height="150"
+                    src="./images/section-slider/slider-image-2.jpg" alt="Фото пломбира с клубничным джемом.">
+                </div>
+                <div class="slider-image-wrapper-3">
+                  <img class="section-slider-image-3" width="66" height="150"
+                    src="./images/section-slider/slider-image-3.jpg" alt="Фото пломбира с клубничным джемом.">
+                </div>
+              </div>
+            </li>
+
+
+            <li class="section-slider-theme-blue">
+              <div class="slider-info-wrapper">
+                <h3 class="section-slider-title">
+                  Сливочное мороженое со вкусом банана
+                </h3>
+                <p class="section-slider-info">
+                  Сливочное мороженое с ярким банановым
+                  вкусом подарит вам свежесть и&nbsp;наслаждение
+                  даже в самый жаркий
+                  летний&nbsp;день.
+                </p>
+                <button class="button button-order" type="button">
+                  Заказать
+                </button>
+              </div>
+
+              <div class="section-slider-image-wrapper">
+                <div class="slider-image-wrapper-1">
+                  <button class="button slider-arrow-left" type="button">
+                    <img class="arrow-left" src="./images/section-slider/arrow-left-icon.svg" width="16" height="16"
+                      alt="Стрелка-переключатель влево.">
+                  </button>
+                  <img class="section-slider-image-1" width="328" height="507"
+                    src="./images/section-slider/slider-image-2.jpg" alt="Фото пломбира с клубничным джемом.">
+                  <button class="button slider-arrow-right" type="button">
+                    <img class="arrow-right" src="./images/section-slider/arrow-right-icon.svg" width="16" height="16"
+                      alt="Стрелка-переключатель вправо.">
+                  </button>
+                </div>
+                <div class="slider-image-wrapper-2">
+                  <img class="section-slider-image-2" width="66" height="150"
+                    src="./images/section-slider/slider-image-3.jpg" alt="Фото пломбира с клубничным джемом.">
+                </div>
+                <div class="slider-image-wrapper-3">
+                  <img class="section-slider-image-3" width="66" height="150"
+                    src="./images/section-slider/slider-image-1.jpg" alt="Фото пломбира с клубничным джемом.">
+                </div>
+              </div>
+            </li>
+
+            <li class="section-slider-theme-yellow">
+              <div class="slider-info-wrapper">
+                <h3 class="section-slider-title">
+                  Карамельный пломбир с маршмеллоу
+                </h3>
+                <p class="section-slider-info">
+                  Необычный сладкий десерт с&nbsp;карамельным
+                  топпингом и кусочками
+                  зефира завоюет сердца&nbsp;сладкоежек всех
+                  возрастов.
+                </p>
+                <button class="button button-order" type="button">
+                  Заказать
+                </button>
+              </div>
+              <div class="section-slider-image-wrapper">
+                <div class="slider-image-wrapper-1">
+                  <button class="button slider-arrow-left" type="button">
+                    <img class="arrow-left" src="./images/section-slider/arrow-left-icon.svg" width="16" height="16"
+                      alt="Стрелка-переключатель влево.">
+                  </button>
+                  <img class="section-slider-image-1" width="328" height="507"
+                    src="./images/section-slider/slider-image-3.jpg" alt="Фото пломбира с клубничным джемом.">
+                  <button class="button slider-arrow-right" type="button">
+                    <img class="arrow-right" src="./images/section-slider/arrow-right-icon.svg" width="16" height="16"
+                      alt="Стрелка-переключатель вправо.">
+                  </button>
+                </div>
+                <div class="slider-image-wrapper-2">
+                  <img class="section-slider-image-2" width="66" height="150"
+                    src="./images/section-slider/slider-image-1.jpg" alt="Фото пломбира с клубничным джемом.">
+                </div>
+                <div class="slider-image-wrapper-3">
+                  <img class="section-slider-image-3" width="66" height="150"
+                    src="./images/section-slider/slider-image-2.jpg" alt="Фото пломбира с клубничным джемом.">
+                </div>
+              </div>
+
+            </li>
+          </ul>
+
 
           <!--Пагинация слайдеров-->
           <div class="slider-pagination-wrapper">
@@ -184,31 +298,8 @@
               </li>
             </ul>
           </div>
-
         </div>
 
-        <div class="section-slider-image-wrapper">
-          <div class="slider-image-wrapper-1">
-            <button class="button slider-arrow-left" type="button">
-              <img class="arrow-left" src="./images/section-slider/arrow-left-icon.svg" width="16" height="16"
-                alt="Стрелка-переключатель влево.">
-            </button>
-            <img class="section-slider-image-1" width="328" height="507"
-              src="./images/section-slider/slider-image-1.jpg" alt="Фото пломбира с клубничным джемом.">
-            <button class="button slider-arrow-right" type="button">
-              <img class="arrow-right" src="./images/section-slider/arrow-right-icon.svg" width="16" height="16"
-                alt="Стрелка-переключатель вправо.">
-            </button>
-          </div>
-          <div class="slider-image-wrapper-2">
-            <img class="section-slider-image-2" width="66" height="150" src="./images/section-slider/slider-image-2.jpg"
-              alt="Фото пломбира с клубничным джемом.">
-          </div>
-          <div class="slider-image-wrapper-3">
-            <img class="section-slider-image-3" width="66" height="150" src="./images/section-slider/slider-image-3.jpg"
-              alt="Фото пломбира с клубничным джемом.">
-          </div>
-        </div>
 
         <!--Социальные сети-->
         <div class="slider-social-links">
@@ -488,7 +579,7 @@
             <div class="delivery-form-address-tooltip">
               <span class="address-form-tooltip-toggle"></span>
               <div class="form-address-tooltip-info" role="tooltip" id="address-tooltip">
-                Введите название улицы, дома и квартиры
+                Введите название улицы, номер дома и квартиры
               </div>
             </div>
             <button class="button button-delivery-subscribe" type="submit">
