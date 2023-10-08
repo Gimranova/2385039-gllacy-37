@@ -1876,13 +1876,23 @@ body {
   line-height: 20px;
 }
 
+.email-input:hover {
+  border: 1px solid #2D3440;
+
+}
+.email-input:focus {
+  border: 2px solid #2D3440;
+}
+
+
 .email-input:active {
   color: #2D3440;
-  font-family: "Inter";
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 20px;
+}
+
+.email-input:disabled {
+  color: rgba(45, 52, 64, 0.65);
+  border: 1px solid #B9B9B9;
+  background-color: #E7E7E7;
 }
 
 .email-input::placeholder {
@@ -2093,6 +2103,12 @@ body {
   border: 1px solid #B9B9B9;
   background-color: #FFF;
   box-sizing: border-box;
+  font-family: "Inter";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  color: #2D3440;
 }
 
 .delivery-form-tel {
@@ -2115,6 +2131,12 @@ body {
   border: 1px solid #B9B9B9;
   background-color: #FFF;
   box-sizing: border-box;
+  font-family: "Inter";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  color: #2D3440;
 }
 
 .delivery-form-address {
@@ -2190,6 +2212,12 @@ body {
   border-radius: 4px;
   border: 1px solid #B9B9B9;
   background-color: #FFF;
+  font-family: "Inter";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  color: #2D3440;
 }
 
 .date-form-tooltip-toggle:hover + .form-date-tooltip-info {
@@ -2200,6 +2228,31 @@ body {
 .address-form-tooltip-toggle:hover + .form-address-tooltip-info {
   display: block;
   z-index: 2;
+}
+
+.delivery-form-date-input:hover,
+.delivery-form-tel-input:hover,
+.delivery-form-address-input:hover {
+  outline: 1px solid #2D3440;
+  color: #2D3440;
+  transition-duration: 0.3s;
+}
+
+.delivery-form-date-input:focus,
+.delivery-form-tel-input:focus,
+.delivery-form-address-input:focus {
+  outline: 2px solid #2D3440;
+  color: #2D3440;
+
+}
+
+
+.delivery-form-date-input:disabled,
+.delivery-form-tel-input:disabled,
+.delivery-form-address-input:disabled {
+  border: 1px solid #B9B9B9;
+  background-color: #E7E7E7;
+  color: rgba(45, 52, 64, 0.65);
 }
 
 .button-delivery-subscribe {

@@ -721,15 +721,15 @@
 
         <section class="section-modal">
           <h2 class="visually-hidden">
-            Форма обратной связи о доставке.
+            Форма обратной связи по доставке.
           </h2>
-          <form class="modal-form">
-            <p class="">
+          <form class="modal-form" method="post">
+            <p class="modal-form-info">
               Мы обязательно ответим вам!
             </p>
-            <input class="modal-full-name" type="text" placeholder="Имя и фамилия" required>
-            <input class="modal-email" type="email" placeholder="email@example.com" required>
-            <input class="modal-email" type="text" placeholder="В свободной форме" required>
+            <input class="modal-full-name" type="text" placeholder="Имя и фамилия" name="full-name" required>
+            <input class="modal-email" type="email" placeholder="email@example.com" name="email" required>
+            <input class="modal-delivery-info" type="text" placeholder="В свободной форме" required>
           </form>
           <button class="button button-subscribe" type="submit">
             Отправить

@@ -22,6 +22,85 @@
   background: #FCFCFC;
   border-radius: 8px;
   box-shadow: 0 15px 40px 0 rgba(45, 52, 64, 0.12);
+}
+
+.modal-close-button {
+  content: "";
+  position: absolute;
+  background-image: url(../images/modal/cross-icon.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #FCFCFC;
+  border: none;
+  width: 20px;
+  height: 20px;
+  top: 32px;
+  right: 32px;
+  cursor: pointer;
+}
+
+.modal-form {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  width: 442px;
+}
+
+.modal-form-info {
+  margin: 0;
+  margin-bottom: 32px;
+  padding: 0;
+  color: #2D3440;
+  font-family: "Inter";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 30px;
+}
+
+.modal-full-name,
+.modal-email,
+.modal-delivery-info {
+  margin: 0;
+  margin-bottom: 16px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  padding-left: 16px;
+  border-radius: 4px;
+  border: 1px solid #B9B9B9;
+  background-color: #FFF;
+  color: #2D3440;
+  font-family: "Inter";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.modal-delivery-info {
+  margin-bottom: 32px;
+  padding-bottom: 115px;
+}
 
 
+.modal-full-name::placeholder,
+.modal-email::placeholder,
+.modal-delivery-info::placeholder {
+  margin: 0;
+  padding: 0;
+  color: #B9B9B9;
+  font-family: "Inter";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  display: flex;
+  align-items: flex-start;
+  text-align: start;
+}
+
+.button-subscribe {
+  margin: 0;
+  margin-left: 282px;
 }
