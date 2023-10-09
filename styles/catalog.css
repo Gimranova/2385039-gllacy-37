@@ -187,15 +187,11 @@
   transition-duration: 0.3s;
 }
 
-.select-control-wrapper:focus {
+.select-control-wrapper:focus,
+.select-control-wrapper:focus-visible {
   background-color: rgba(252, 252, 252, 0.4);
   border-radius: 26px;
   outline: 2px solid #FCFCFC;
-  outline-style: none;
-  border: none;
-}
-
-.select-control-wrapper:focus-visible {
   outline-style: none;
   border: none;
 }
@@ -472,15 +468,6 @@
   opacity: 0.5;
 }
 
-/*.control-checkbox:checked:focus-visible,
-.control-checkbox:checked:focus,
-.control-checkbox:focus,
-.control-checkbox:focus-visible,
-.control-radio:focus-visible {
-  outline-style: none;
-  border-style: none;
-}*/
-
 .control-radio {
   width: 16px;
   height: 16px;
@@ -658,7 +645,6 @@
 }
 
 .pagination-current {
-
   border-radius: 50px;
   background-color: #FCFCFC;
 }

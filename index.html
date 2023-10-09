@@ -106,35 +106,36 @@
               <a class="header-navigation-right-cart" href="#">
                 2 товара
               </a>
-            </div>
-            <!--Хедер. Попап корзины-->
-            <div class="cart-tooltip-wrapper">
-              <div class="tooltip-cart" role="tooltip" id="tooltip-label-cart">
-                <h4 class="tooltip-cart-title">Корзина</h4>
-                <div class="tooltip-cart-list">
-                  <img class="tooltip-list-image" width="46" height="46" src="./images/cart-tooltip/raspberry.svg"
-                    alt="Фото мороженого Малинка.">
-                  <div class="tooltip-cart-wrapper">
-                    <a class="tooltip-cart-link" href="#">Малинка</a>
-                    <span class="tooltip-list-content">1 кг х 310 ₽</span>
+              <!--Хедер. Попап корзины-->
+              <div class="cart-tooltip-wrapper">
+                <div class="tooltip-cart" role="tooltip" id="tooltip-label-cart">
+                  <h4 class="tooltip-cart-title">Корзина</h4>
+                  <div class="tooltip-cart-list">
+                    <img class="tooltip-list-image" width="46" height="46" src="./images/cart-tooltip/raspberry.svg"
+                      alt="Фото мороженого Малинка.">
+                    <div class="tooltip-cart-wrapper">
+                      <a class="tooltip-cart-link" href="#">Малинка</a>
+                      <span class="tooltip-list-content">1 кг х 310 ₽</span>
+                    </div>
+                    <span class="tooltip-list-count">310 ₽</span>
                   </div>
-                  <span class="tooltip-list-count">310 ₽</span>
+                  <div class="tooltip-cart-list">
+                    <img class="tooltip-list-image" width="46" height="46" src="./images/cart-tooltip/bubble-gum.svg"
+                      alt="Фото мороженого Бабл-гам.">
+                    <div class="tooltip-cart-wrapper">
+                      <a class="tooltip-cart-link" href="#">Бабл-гам</a>
+                      <span class="tooltip-list-content">1,5 кг х 320 ₽</span>
+                    </div>
+                    <span class="tooltip-list-count">480 ₽</span>
+                  </div>
                 </div>
-                <div class="tooltip-cart-list">
-                  <img class="tooltip-list-image" width="46" height="46" src="./images/cart-tooltip/bubble-gum.svg"
-                    alt="Фото мороженого Бабл-гам.">
-                  <div class="tooltip-cart-wrapper">
-                    <a class="tooltip-cart-link" href="#">Бабл-гам</a>
-                    <span class="tooltip-list-content">1,5 кг х 320 ₽</span>
-                  </div>
-                  <span class="tooltip-list-count">480 ₽</span>
+                <div class="tooltip-cart-total-wrapper">
+                  <button class="button button-checkout" type="button">Оформить заказ</button>
+                  <span class="tooltip-cart-total">Итого: 790 ₽</span>
                 </div>
               </div>
-              <div class="tooltip-cart-total-wrapper">
-                <button class="button button-checkout" type="button">Оформить заказ</button>
-                <span class="tooltip-cart-total">Итого: 790 ₽</span>
-              </div>
             </div>
+
             <!--Верстка пустой карзины-->
             <div class="cart-wrapper-empty">
               <a class="cart-empty" href="#">
@@ -176,14 +177,22 @@
               <div class="section-slider-image-wrapper">
                 <div class="slider-image-wrapper-1">
                   <button class="button slider-arrow-left" type="button">
-                    <img class="arrow-left" src="./images/section-slider/arrow-left-icon.svg" width="16" height="16"
-                      alt="Стрелка-переключатель влево.">
+                    <svg class="arrow-left" xmlns="http://www.w3.org/2000/svg" width="17" height="16"
+                      fill="currentColor" viewBox="0 0 17 16">
+                      <path fill-rule="evenodd"
+                        d="M9.71 13.135a.665.665 0 0 0 .94-.94l-4.2-4.201 4.2-4.202a.665.665 0 0 0-.94-.94L5.042 7.52l-.003.003c-.26.26-.26.681 0 .94l4.671 4.672Z"
+                        clip-rule="evenodd" />
+                    </svg>
                   </button>
                   <img class="section-slider-image-1" width="328" height="507"
                     src="./images/section-slider/slider-image-1.jpg" alt="Фото пломбира с клубничным джемом.">
                   <button class="button slider-arrow-right" type="button">
-                    <img class="arrow-right" src="./images/section-slider/arrow-right-icon.svg" width="16" height="16"
-                      alt="Стрелка-переключатель вправо.">
+                    <svg class="arrow-right" xmlns="http://www.w3.org/2000/svg" width="17" height="16"
+                      fill="currentColor" viewBox="0 0 17 16">
+                      <path fill-rule="evenodd"
+                        d="M7.29 2.865a.665.665 0 1 0-.94.94l4.2 4.201-4.2 4.202a.665.665 0 0 0 .94.94l4.668-4.668.003-.003c.26-.26.26-.681 0-.94L7.29 2.864Z"
+                        clip-rule="evenodd" />
+                    </svg>
                   </button>
                 </div>
                 <div class="slider-image-wrapper-2">
@@ -516,12 +525,14 @@
               ненужной ерунды.
               Честно =)
             </p>
-            <label class="email-form">
-              <input class="email-input" type="email" placeholder="email@example.com">
-            </label>
-            <button class="button button-subscribe" type="submit">
-              Отправить
-            </button>
+            <div class="email-form-wrapper">
+              <label class="email-form">
+                <input class="email-input" type="email" placeholder="email@example.com">
+              </label>
+              <button class="button button-subscribe" type="submit">
+                Отправить
+              </button>
+            </div>
           </form>
         </div>
       </section>
@@ -544,28 +555,34 @@
             подтвердить заказ.
           </p>
           <form class="section-delivery-form" action="https://echo.htmlacademy.ru/" method="post">
-            <label class="delivery-form-date">
-              Дата
-              <input class="delivery-form-date-input" type="text" placeholder="01.04.2020">
-            </label>
-            <div class="delivery-form-date-tooltip">
-              <span class="date-form-tooltip-toggle"></span>
-              <div class="form-date-tooltip-info" role="tooltip" id="date-tooltip">
-                Введите желаемую дату доставки
+            <div class="delivery-form-wrapper">
+              <label class="delivery-form-date">
+                Дата
+                <input class="delivery-form-date-input" type="text" placeholder="01.04.2020">
+              </label>
+              <div class="delivery-form-date-tooltip">
+                <span class="date-form-tooltip-toggle"></span>
+                <div class="form-date-tooltip-info" role="tooltip" id="date-tooltip">
+                  Введите желаемую дату доставки
+                </div>
               </div>
             </div>
-            <label class="delivery-form-tel">
-              Телефон
-              <input class="delivery-form-tel-input" type="tel" placeholder="+7 800 999-00-00">
-            </label>
-            <label class="delivery-form-address">
-              Адрес
-              <input class="delivery-form-address-input" type="text" placeholder="ул. Большая Конюшенная, 19/8">
-            </label>
-            <div class="delivery-form-address-tooltip">
-              <span class="address-form-tooltip-toggle"></span>
-              <div class="form-address-tooltip-info" role="tooltip" id="address-tooltip">
-                Введите название улицы, дома и квартиры
+            <div class="delivery-form-wrapper">
+              <label class="delivery-form-tel">
+                Телефон
+                <input class="delivery-form-tel-input" type="tel" placeholder="+7 800 999-00-00">
+              </label>
+            </div>
+            <div class="delivery-form-wrapper">
+              <label class="delivery-form-address">
+                Адрес
+                <input class="delivery-form-address-input" type="text" placeholder="ул. Большая Конюшенная, 19/8">
+              </label>
+              <div class="delivery-form-address-tooltip">
+                <span class="address-form-tooltip-toggle"></span>
+                <div class="form-address-tooltip-info" role="tooltip" id="address-tooltip">
+                  Введите название улицы, дома и квартиры
+                </div>
               </div>
             </div>
             <button class="button button-delivery-subscribe" type="submit">

@@ -38,6 +38,8 @@ body {
   flex-wrap: wrap;
   min-height: 100%;
   width: 100%;
+  font-family: "inter", sans-serif;
+  font-style: normal;
 
   outline: 1px solid blue;
   outline-offset: -1px;
@@ -299,7 +301,7 @@ body {
 
 .header-catalog-wrapper:hover {
   color: #FCFCFC;
-  transition-duration: 0.3;
+  transition-duration: 0.3s;
 }
 
 /* Вот здесь вопрос как сделать правильно */
@@ -393,6 +395,11 @@ body {
   position: relative;
 }
 
+.header-seach-wrapper:focus-within .header-seach-tooltip {
+  display: block;
+  z-index: 2;
+}
+
 .header-navigation-seach {
   margin: 0;
   margin-right: 16px;
@@ -456,6 +463,12 @@ body {
   line-height: 20px;
 }
 
+.seach-input-tooltip:hover {
+  border-radius: 4px;
+  outline: 1px solid #2D3440;
+  transition-duration: 0.3s;
+}
+
 .seach-input-tooltip:active::placeholder {
   color: #2D3440;
   font-family: "Inter";
@@ -464,12 +477,6 @@ body {
   font-weight: 400;
   line-height: 20px;
   outline: 1px solid #B9B9B9;
-}
-
-.seach-input-tooltip:hover {
-  border-radius: 4px;
-  outline: 1px solid #2D3440;
-  transition-duration: 0.3s;
 }
 
 .seach-input-tooltip:focus,
@@ -485,11 +492,6 @@ body {
   color: rgba(45, 52, 64, 0.65);
 }
 
-.header-seach-tooltip:active,
-.header-seach-tooltip:hover {
-  display: block;
-  transition-duration: 0.3s;
-}
 
 .header-seach-button {
   margin: 0;
@@ -541,16 +543,12 @@ body {
   left: 16px;
 }
 
-/* Вход в личный кабинет - поповер */
-.header-entrance-tooltip-wrapper {
-  margin: 0;
-  margin-top: 8px;
-  padding: 0;
-  display: flex;
-  position: absolute;
-  top: 100%;
+.header-entrance-wrapper:focus-within .header-entrance-tooltip {
+  display: block;
+  z-index: 2;
 }
 
+/* Вход в личный кабинет - поповер */
 .header-entrance-tooltip {
   margin: 0;
   padding: 48px;
@@ -732,6 +730,7 @@ body {
   outline-offset: -1px;
 }
 
+
 .cart-wrapper-empty {
   margin: 0;
   margin-left: auto;
@@ -794,8 +793,8 @@ body {
   padding: 48px;
   width: 441px;
   position: absolute;
-  top: 64px;
-  right: 175px;
+  top: 32px;
+  right: 0;
   border-radius: 4px;
   background-color: #FCFCFC;
   box-shadow: 0 15px 40px 0 rgba(45, 52, 64, 0.12);
@@ -808,6 +807,12 @@ body {
   margin: 0;
   padding: 0;
 }
+
+.cart-wrapper:focus-within .cart-tooltip-wrapper {
+  display: block;
+  z-index: 2;
+}
+
 
 .tooltip-cart-title {
   margin: 0;
@@ -914,6 +919,8 @@ body {
   align-items: center;
 }
 
+
+
 .button-checkout {
   margin: 0;
   padding: 12px 32px;
@@ -1014,9 +1021,6 @@ body {
 .section-slider-wrapper {
   margin: 0;
   padding: 0;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 .section-slider-list {
@@ -1073,9 +1077,6 @@ body {
   flex-wrap: wrap;
   align-items: center;
   justify-content: start;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 .section-slider-info {
@@ -1089,10 +1090,8 @@ body {
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
+
 .section-slider-image-wrapper {
   margin: 0;
   padding: 0;
@@ -1123,23 +1122,32 @@ body {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-}
+  color: #FCFCFC;
 
-.arrow-left,
-.arrow-right {
-  width: 17px;
-  height: 16px;
 }
 
 .slider-arrow-left:hover,
 .slider-arrow-right:hover {
   background-color: #FCFCFC;
+  color: #2D3440;
   transition-duration: 0.3s;
 }
 
-.arrow-left:hover {
-  fill: #2D3440;
-  transition-duration: 0.3s;
+.slider-arrow-left:active,
+.slider-arrow-right:active {
+  background-color: rgba(252, 252, 252, 0.50);
+  color: #2D3440;
+  border: none;
+}
+
+.slider-arrow-left:focus,
+.slider-arrow-right:focus,
+.slider-arrow-left:focus-visible,
+.slider-arrow-right:focus-visible {
+  background-color: rgba(252, 252, 252, 0.30);
+  color: #2D3440;
+  outline: 2px solid #2D3440;
+  border: none;
 }
 
 .section-slider-image-1 {
@@ -1218,7 +1226,7 @@ body {
 
 .body-theme-yellow .slider-image-wrapper-1::before,
 .body-theme-yellow .slider-image-wrapper-2::before,
-.body-theme-yellow .slider-image-wrapper-3::before  {
+.body-theme-yellow .slider-image-wrapper-3::before {
   background-color: #FCDC92;
 }
 
@@ -1322,8 +1330,9 @@ body {
   margin-left: auto;
   list-style-type: none;
   width: 104px;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 24px);
+  column-gap: 16px;
   align-items: center;
   justify-content: space-between;
 
@@ -1787,7 +1796,7 @@ body {
 
 .section-mailing-wrapper {
   margin: 0;
-  padding: 33px 235px 67px 32px;
+  padding: 32px 235px 67px 32px;
   width: 570px;
   display: flex;
   flex-wrap: wrap;
@@ -1850,6 +1859,15 @@ body {
   line-height: 22px;
 }
 
+.email-form-wrapper {
+  margin: 0;
+  padding: 0;
+  width: 506px;
+  display: grid;
+  grid-template-columns: 332px 160px;
+  column-gap: 14px;
+}
+
 .email-form {
   margin: 0;
   padding: 0;
@@ -1875,18 +1893,19 @@ body {
 }
 
 .email-input:hover {
-  border: 1px solid #2D3440;
+  outline: 1px solid #2D3440;
   transition-duration: 0.3s;
-
 }
-.email-input:focus {
-  border: 2px solid #2D3440;
-}
-
 
 .email-input:active {
   color: #2D3440;
 }
+
+.email-input:focus,
+.email-input:focus-visible {
+  outline: 2px solid #2D3440;
+}
+
 
 .email-input:disabled {
   color: rgba(45, 52, 64, 0.65);
@@ -1906,7 +1925,6 @@ body {
 .button-subscribe {
   margin: 0;
   padding: 12px 32px;
-  margin-left: 10px;
   width: 160px;
   color: #FCFCFC;
   text-align: center;
@@ -2000,6 +2018,13 @@ body {
   flex-wrap: wrap;
 }
 
+.delivery-form-wrapper {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 20px;
+  position: relative;
+}
+
 .delivery-form-date,
 .delivery-form-tel,
 .delivery-form-address {
@@ -2037,8 +2062,8 @@ body {
 }
 
 
-.delivery-form-date-tooltip {
-  position: absolute;
+.delivery-form-date-tooltip,
+.delivery-form-addredd-tooltip {
   margin-right: 2px;
 }
 
@@ -2143,15 +2168,8 @@ body {
   padding: 0;
   margin-top: 20px;
   position: relative;
-}
 
-.delivery-form-address-tooltip {
-  margin: 0;
-  padding: 0;
-  position: absolute;
-  margin-right: 2px;
 }
-
 
 .address-form-tooltip-toggle::after {
   content: "";
@@ -2187,6 +2205,7 @@ body {
   left: 72px;
   top: -7px;
   display: none;
+  box-sizing: border-box;
 }
 
 .form-address-tooltip-info::before {
@@ -2217,6 +2236,7 @@ body {
   font-weight: 400;
   line-height: 20px;
   color: #2D3440;
+  box-sizing: border-box;
 }
 
 .date-form-tooltip-toggle:hover + .form-date-tooltip-info {
@@ -2257,7 +2277,7 @@ body {
 
 .button-delivery-subscribe {
   margin: 0 auto;
-  margin-top: 32px;
+  margin-top: 12px;
   padding: 12px 32px;
   width: 160px;
   color: #FCFCFC;
@@ -2448,12 +2468,11 @@ body {
   margin: 0;
   padding: 0;
   list-style-type: none;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 24px);
+  column-gap: 16px;
 }
 
-.social-item:not(:last-child) {
-  margin-right: 15px;
-}
 
 
 .social-tme,
@@ -2490,17 +2509,24 @@ body {
 
 .social-tme:hover::after,
 .social-vk:hover::after,
-.social-youtube:hover::after,
+.social-youtube:hover::after {
+  background-color: #2D3440;
+  transition-duration: 0.3s;
+}
+
 .social-tme:active::after,
 .social-vk:active::after,
-.social-youtube:active::after,
+.social-youtube:active::after {
+  background-color: #2D3440;
+  transition-duration: 0.3s;
+}
+
 .social-tme:focus::after,
 .social-vk:focus::after,
 .social-youtube:focus::after {
   background-color: #2D3440;
   transition-duration: 0.3s;
 }
-
 
 .social-tme:hover,
 .social-vk:hover,
@@ -2640,3 +2666,8 @@ body {
   text-underline-offset: 2px;
   text-decoration-thickness: 1px;
 }
+
+/* Уточнить у Коли можно ли стилизовать так
+  input:placeholder-shown {
+  border: 2px solid red;
+}*/
