@@ -15,7 +15,6 @@
 
   outline: 1px solid red;
   outline-offset: -1px;
-
 }
 
 .breadcrumbs {
@@ -116,7 +115,6 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: start;
-
 }
 
 .section-sorting-wrapper {
@@ -124,10 +122,10 @@
   padding: 0;
   width: 196px;
   margin-right: 24px;
+  position: relative;
 
   outline: 1px solid red;
   outline-offset: -1px;
-  position: relative;
 }
 
 
@@ -186,6 +184,7 @@
 .select-control-wrapper:hover {
   background-color: rgba(252, 252, 252, 0.5);
   border-radius: 20px;
+  transition-duration: 0.3s;
 }
 
 .select-control-wrapper:focus {
@@ -195,6 +194,7 @@
   outline-style: none;
   border: none;
 }
+
 .select-control-wrapper:focus-visible {
   outline-style: none;
   border: none;
@@ -207,7 +207,6 @@
   margin-right: 24px;
   appearance: none;
   border: none;
-
 
   outline: 1px solid red;
   outline-offset: -1px;
@@ -266,6 +265,7 @@
   background-image: url(../images/catalog/range-hover.svg);
   background-repeat: no-repeat;
   border: none;
+  transition-duration: 0.3s;
 }
 
 .range-toggle:active{
@@ -352,7 +352,6 @@
 
   outline: 1px solid red;
   outline-offset: -1px;
-
 }
 
 .catalog-filter-radio:not(:last-child) {
@@ -457,11 +456,13 @@
 .control-checkbox:checked:hover {
   background-image: url(../images/catalog/checkbox-hover.svg);
   background-repeat: no-repeat;
+  transition-duration: 0.3s;
 }
 
 .control-checkbox:hover {
   background-image: url(../images/catalog/check-on-hover.svg);
   background-repeat: no-repeat;
+  transition-duration: 0.3s;
 }
 
 .control-checkbox:checked:disabled,
@@ -499,11 +500,13 @@
 .control-radio:checked:hover {
   background-image: url(../images/catalog/radio-on-hover.svg);
   background-repeat: no-repeat;
+  transition-duration: 0.3s;
 }
 
 .control-radio:hover {
   background-image: url(../images/catalog/radio-icon-hover.svg);
   background-repeat: no-repeat;
+  transition-duration: 0.3s;
 }
 
 
@@ -528,6 +531,7 @@
 .button-filter-apply:hover {
   outline: 2px solid rgba(252, 252, 252, 0.30);
   background-color: #FCFCFC;
+  transition-duration: 0.3s;
 }
 
 .button-filter-apply:active {
@@ -545,7 +549,6 @@
   opacity: 0.4;
   background: rgba(252, 252, 252, 0.30);
 }
-
 
 
 /* Каталог товаров */
@@ -580,7 +583,6 @@
 
   outline: 1px solid red;
   outline-offset: -1px;
-
 }
 
 .button-download-more {
@@ -653,23 +655,50 @@
   font-style: normal;
   font-weight: 400;
   line-height: 20px;
-
-}
-
-.pagination-previoust {
-  margin: 0;
-  padding: 4px;
-  margin-right: 8px;
-  width: 16px;
-  height: 16px;
-  text-align: center;
-  background-position: center;
-  display: inline-block;
 }
 
 .pagination-current {
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
+
+  border-radius: 50px;
   background-color: #FCFCFC;
+}
+
+.pagination-link:hover {
+  border-radius: 50px;
+  background-color: rgba(252, 252, 252, 0.50);
+  transition-duration: 0.3s;
+}
+
+.pagination-link:active {
+  border-radius: 50px;
+  outline: 1px solid #FCFCFC;
+  background-color: rgba(252, 252, 252, 0.50);
+}
+
+.pagination-link:focus,
+.pagination-link:focus-visible {
+  border-radius: 50px;
+  outline: 1px solid #2D3440;
+  background-color: rgba(252, 252, 252, 0.30);
+}
+
+
+.pagination-previoust {
+  margin: 0;
+  padding: 0;
+  margin-right: 8px;
+  margin-top: 4px;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+}
+
+.pagination-next {
+  margin: 0;
+  padding: 0;
+  margin-top: 4px;
+  margin-left: auto;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
 }
