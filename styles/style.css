@@ -1156,9 +1156,6 @@ body {
   width: 327px;
   height: 507px;
   object-fit: cover;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 .slider-image-wrapper-1::before {
