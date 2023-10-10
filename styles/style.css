@@ -40,9 +40,6 @@ body {
   width: 100%;
   font-family: "inter", sans-serif;
   font-style: normal;
-
-  outline: 1px solid blue;
-  outline-offset: -1px;
 }
 
 .body-theme-pink {
@@ -87,10 +84,6 @@ body {
   margin-top: 24px;
   margin-bottom: 24px;
   display: flex;
-
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 .header-logo-wrapper {
@@ -98,7 +91,33 @@ body {
   height: 56px;
   margin: 0;
   padding: 0;
-  margin-right: 16px;
+}
+
+.header-logo-link {
+  margin: 0;
+  padding: 0;
+}
+
+.header-logo {
+  margin: 0;
+  padding: 0;
+  width: 137px;
+  height: 56px;
+}
+
+.header-logo-link:hover {
+  opacity: 0.8;
+  transition-duration: 0.3s;
+}
+
+.header-logo-link:active {
+  opacity: 0.6;
+}
+
+.header-logo-link:focus,
+.header-logo-link-:focus-visible {
+  outline: 1px solid #2D3440;
+  border: none;
 }
 
 .header-navigation-wrapper {
@@ -113,30 +132,49 @@ body {
 .header-navigation-left {
   margin: 0;
   padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: start;
-  width: 422px;
-  align-items: center;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
-.header-catalog-wrapper {
-  width: 117px;
+.header-navigation-left-list {
   margin: 0;
-  padding: 8px 16px;
+  margin-left: 16px;
+  margin-top: 10px;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 117px 179px 126px;
+  gap: 2px;
+  width: 426px;
+  align-items: center;
+}
+
+.header-navigation-left-item {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+}
+
+.header-navigation-left-link {
+  margin: 0;
+  padding:  8px 16px;
+  text-decoration: none;
   color: #2D3440;
-  font-family: "Inter";
+  font-family: inherit;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 20px;
-  cursor: pointer;
-  position: relative;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
 }
 
+.header-catalog-link {
+  margin: 0;
+  padding:  8px 16px;
+  width: 117px;
+  display: flex;
+  justify-content: space-between;
+}
 
 .header-navigation-left-link:hover {
   border-radius: 30px;
@@ -158,36 +196,13 @@ body {
   border: none;
 }
 
-
-.header-navigation-left-link:focus-visible,
-.header-phone-link:focus-visible {
-  outline: none;
-}
-
-
-.header-catalog {
-  cursor: pointer;
-}
-
-.header-catalog::before {
-  content: "";
-  position: absolute;
-  width: 16px;
-  height: 16px;
-  background: url(../images/header/arrow-down-icon.svg) no-repeat center;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 16px;
-  display: block;
-}
-
 /* Открывающийся подкаталог продукции */
 .subcatalog {
   position: absolute;
   margin: 0;
   padding: 0;
-  margin-left: -15px;
-  margin-top: 15px;
+  margin-left: 0;
+  margin-top: 10px;
   width: 135px;
   list-style-type: none;
   border-radius: 4px;
@@ -197,6 +212,43 @@ body {
   display: none;
 }
 
+
+.header-navigation-left-list:focus-within .subcatalog {
+  display: block;
+  z-index: 2;
+}
+
+
+
+.header-catalog-link:focus-within {
+  color: #FCFCFC;
+  background-color: #FF4A78;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+}
+
+.header-catalog-link:focus-within .arrow-icon {
+  transform: rotate(180deg) translateY(-2px);
+}
+
+.header-catalog-link:hover {
+  color: #FCFCFC;
+  background-color: #FF4A78;
+  border: none;
+  opacity: 0.6;
+  transition-duration: 0.3s;
+}
+
+.header-catalog-link:active {
+  opacity: 0.3;
+}
+
+.header-catalog-link:focus,
+.header-catalog-link:focus-visible {
+  outline: 2px solid #000;
+  border: none;
+}
 
 .subcatalog-list {
   margin: 0;
@@ -268,82 +320,16 @@ body {
   top: 28px;
 }
 
-.header-catalog:active::before,
-.header-catalog:hover::before,
-.header-catalog:focus::before {
-  content: "";
-  position: absolute;
-  width: 16px;
-  height: 16px;
-  background: url(../images/header/arrow-up-icon.svg) no-repeat center;
-  top: 20px;
-  right: 16px;
-  background-position: center;
-  transition-duration: 0.3s;
-}
-
-.subcatalog-checkbox:checked ~ .subcatalog {
-  position: absolute;
-  margin: 0;
-  padding: 0;
-  margin-left: -16px;
-  margin-top: 12px;
-  width: 135px;
-  list-style-type: none;
-  border-radius: 4px;
-  background: #FCFCFC;
-  box-shadow: 0 8px 16px 0 rgba(45, 52, 64, 0.12);
-  z-index: 2;
-  outline: 1px solid red;
-  outline-offset: -1px;
-
-}
-
-.header-catalog-wrapper:hover {
-  color: #FCFCFC;
-  transition-duration: 0.3s;
-}
-
-/* Вот здесь вопрос как сделать правильно */
-.header-catalog:hover + .subcatalog,
-.header-catalog:active + .subcatalog,
-.header-catalog:focus + .subcatalog,
-.subcatalog-list:focus-within > .subcatalog,
-.subcatalog:hover,
-.subcatalog:active,
-.subcatalog:focus,
-.subcatalog:focus-visible {
-  display: block;
-  transition-duration: 0.3s;
-}
-
-
-.header-navigation-left-link {
-  padding: 8px 16px;
-  margin: 0;
-  text-decoration: none;
-  color: #2D3440;
-  font-family: "Inter";
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 20px;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
-}
-
-
 /* Навигация правой части главной страницы */
 .header-navigation-right {
   margin: 0;
   padding: 0;
   margin-left: auto;
+  max-width: 456px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: start;
-  width: 431px;
   align-items: center;
+  justify-content: end;
 }
 
 .header-phone-link {
@@ -409,20 +395,41 @@ body {
   justify-content: center;
   width: 32px;
   height: 32px;
+  color: #2D3440;
   background-color: rgba(252, 252, 252, 0.30);
   border-radius: 50%;
   position: relative;
 }
 
-.header-navigation-seach::after {
-  margin: 0;
-  padding: 0;
-  content: "";
-  width: 16px;
-  height: 16px;
-  background-image: url(../images/header/search-icon.svg);
-  background-repeat: no-repeat;
-  display: block;
+.header-navigation-seach:focus-within {
+  color: #FCFCFC;
+  background-color: #FF4A78;
+  border: none;
+  transition-duration: 0.3s;
+}
+
+.header-navigation-seach:hover {
+  color: #FCFCFC;
+  background-color: #FF4A78;
+  opacity: 0.6;
+  border: none;
+  transition-duration: 0.3s;
+}
+
+.header-navigation-seach:active {
+  color: #FCFCFC;
+  background-color: #FF4A78;
+  opacity: 0.3;
+  border: none;
+  transition-duration: 0.3s;
+}
+
+.header-navigation-seach:focus,
+.header-navigation-seach:focus-visible {
+  color: #FCFCFC;
+  background-color: #FF4A78;
+  outline: 2px solid #000000;
+  border: none;
 }
 
 .header-seach-tooltip {
@@ -517,35 +524,47 @@ body {
   position: relative;
 }
 
+
 .header-navigation-right-entrance {
   margin: 0;
-  padding: 6px 16px 6px 38px;
+  padding: 6px 16px;
   width: 88px;
+  color: #2D3440;
   background-color: rgba(252, 252, 252, 0.30);
   border-radius: 30px;
   box-sizing: border-box;
+  display: flex;
   position: relative;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
+  flex-wrap: nowrap;
+  justify-content: space-between;
 }
 
-.header-navigation-right-entrance::before {
-  margin: 0;
-  padding: 0;
-  content: "";
-  width: 16px;
-  height: 16px;
-  position: absolute;
-  background: url(../images/header/entrance-icon.svg) no-repeat center;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 16px;
-}
 
 .header-entrance-wrapper:focus-within .header-entrance-tooltip {
   display: block;
   z-index: 2;
+}
+
+.header-navigation-right-entrance:focus-within {
+  color: #FCFCFC;
+  background-color: #FF4A78;
+}
+
+.header-navigation-right-entrance:hover {
+  opacity: 0.6;
+  border: none;
+  transition-duration: 0.3s;
+}
+
+.header-navigation-right-entrance:active {
+  opacity: 0.3;
+  border: none;
+}
+
+.header-navigation-right-entrance:focus,
+.header-navigation-right-entrance:focus-visible {
+  outline: 2px solid #000000;
+  border: none;
 }
 
 /* Вход в личный кабинет - поповер */
@@ -594,6 +613,12 @@ body {
   border: 1px solid #B9B9B9;
   background-color: #FFF;
   box-sizing: border-box;
+  color: #2D3440;
+  font-family: inherit;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
 }
 
 .email-input-tooltip::placeholder {
@@ -610,7 +635,6 @@ body {
   margin: 0;
   padding: 0;
   position: relative;
-  display: flex;
 }
 
 .password-input {
@@ -625,7 +649,9 @@ body {
   border: 1px solid #B9B9B9;
   background-color: #FFF;
   box-sizing: border-box;
+  position: relative;
 }
+
 
 .password-form::after {
   content: "";
@@ -635,7 +661,8 @@ body {
   background-position: center;
   width: 44px;
   height: 4px;
-  top: 38px;
+  top: 50%;
+  transform: translateY(-50%);
   left: 16px;
 }
 
@@ -697,7 +724,6 @@ body {
   flex-wrap: nowrap;
   flex-direction: column;
   justify-content: space-between;
-
 }
 
 .password-lose,
@@ -716,48 +742,53 @@ body {
 
 .cart-wrapper {
   margin: 0;
+  padding: 0;
+  position: relative;
+  /*display: none;*/
+  /* Разкомменторовать данное свойство,
+  чтобы увидеть верстку пустой корзины */
+}
+
+.header-navigation-right-cart {
+  margin: 0;
   margin-left: 16px;
-  padding: 6px 0 6px 38px;
+  padding: 6px 16px;
   width: 115px;
   display: flex;
+  justify-content: space-between;
   cursor: pointer;
   background-color: rgba(252, 252, 252, 0.30);
   border-radius: 30px;
   box-sizing: border-box;
-  position: relative;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
+  font-family: inherit;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
 }
-
 
 .cart-wrapper-empty {
   margin: 0;
-  margin-left: auto;
-  padding: 6px 0 6px 38px;
+  padding: 0;
+  position: relative;
+  display: none;
+  /* Закоментировать display: none,
+  что увидеть верстку пустой корзины */
+}
+
+.cart-empty {
+  margin: 0;
+  margin-left: 16px;
+  padding: 6px 16px;
   width: 140px;
   cursor: pointer;
   background-color: rgba(252, 252, 252, 0.30);
   border-radius: 30px;
   box-sizing: border-box;
   position: relative;
-
-  display: none;
-}
-
-.cart-wrapper::before,
-.cart-wrapper-empty::before {
-  content: "";
-  position: absolute;
-  width: 16px;
-  height: 16px;
-  background: url(../images/header/cart-icon-black.svg) no-repeat center;
-  left: 16px;
-  top: 50%;
-  transform: translateY(-50%);
-
-  outline: 1px solid red;
-  outline-offset: -1px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
 }
 
 .cart-tooltip-empty-wrapper {
@@ -768,9 +799,9 @@ body {
   background: #FCFCFC;
   box-shadow: 0 15px 40px 0 rgba(45, 52, 64, 0.12);
   position: absolute;
-  top: 64px;
-  right: 365px;
-
+  top: 40px;
+  right: 0;
+  box-sizing: border-box;
   display: none;
 }
 
@@ -785,6 +816,38 @@ body {
   font-weight: 700;
   line-height: 30px;
 }
+
+.cart-wrapper-empty:focus-within .cart-tooltip-empty-wrapper {
+  display: block;
+  z-index: 2;
+}
+
+.cart-empty:focus-within {
+  color: #FCFCFC;
+  background-color: #FF4A78;
+}
+
+.cart-empty:hover {
+  color: #FCFCFC;
+  background-color: #FF4A78;
+  opacity: 0.6;
+  transition-duration: 0.3s;
+}
+
+.cart-empty:active {
+  color: #FCFCFC;
+  background-color: #FF4A78;
+  opacity: 0.3;
+}
+
+.cart-empty:focus,
+.cart-empty:focus-visible {
+  color: #FCFCFC;
+  background-color: #FF4A78;
+  outline: 2px solid #000000;
+  border: none;
+}
+
 
 /* Хедер. Попап корзины */
 .cart-tooltip-wrapper {
@@ -803,16 +866,43 @@ body {
   display: none;
 }
 
+
 .tooltip-cart {
   margin: 0;
   padding: 0;
 }
+
 
 .cart-wrapper:focus-within .cart-tooltip-wrapper {
   display: block;
   z-index: 2;
 }
 
+.header-navigation-right-cart:focus-within {
+  color: #FCFCFC;
+  background-color: #FF4A78;
+}
+
+.header-navigation-right-cart:hover {
+  color: #FCFCFC;
+  background-color: #FF4A78;
+  transition-duration: 0.3s;
+  opacity: 0.6;
+}
+
+.header-navigation-right-cart:active {
+  color: #FCFCFC;
+  background-color: #FF4A78;
+  opacity: 0.3;
+}
+
+.header-navigation-right-cart:focus,
+.header-navigation-right-cart:focus-visible {
+  color: #FCFCFC;
+  background-color: #FF4A78;
+  outline: 2px solid #000000;
+  border: none;
+}
 
 .tooltip-cart-title {
   margin: 0;
@@ -995,9 +1085,6 @@ body {
   margin: 0 auto;
   padding: 0;
   width: 1366px;
-
-  outline: 1px solid black;
-  outline-offset: -1px;
 }
 
 
@@ -1011,9 +1098,6 @@ body {
   grid-template-columns: 525px 367px 278px;
   column-gap: 0;
   position: relative;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 
@@ -1123,7 +1207,6 @@ body {
   justify-content: center;
   align-items: center;
   color: #FCFCFC;
-
 }
 
 .slider-arrow-left:hover,
@@ -1332,9 +1415,6 @@ body {
   column-gap: 16px;
   align-items: center;
   justify-content: space-between;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 .slider-social-item {
@@ -1342,9 +1422,6 @@ body {
   height: 28px;
   margin: 0;
   padding: 2px;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 
